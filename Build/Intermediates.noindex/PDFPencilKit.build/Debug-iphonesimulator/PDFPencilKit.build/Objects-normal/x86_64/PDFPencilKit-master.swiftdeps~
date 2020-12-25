@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "cc8267be1f75a4f444b60b82c3104718"
+build_time: [1608931667, 522887000]
+inputs:
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/ViewController.swift": !dirty [1608929533, 891817815]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/UICollectionViewCell/contentCell.swift": !dirty [1608924638, 601563119]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/Extensions/UIViewExtensions.swift": !dirty [1608917025, 357376695]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/AppDelegates/AppDelegate.swift": !dirty [1608931666, 237057858]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/Extensions/UIStatusBarColor.swift": !dirty [1608907759, 677164846]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/PDFViewController.swift": !dirty [1608929533, 874671389]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/CustomAlertViewController.swift": !dirty [1608930457, 467163968]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/UITableViewCell/sideCell.swift": !dirty [1608919735, 765977318]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/AppDelegates/SceneDelegate.swift": !dirty [1608369998, 307778719]

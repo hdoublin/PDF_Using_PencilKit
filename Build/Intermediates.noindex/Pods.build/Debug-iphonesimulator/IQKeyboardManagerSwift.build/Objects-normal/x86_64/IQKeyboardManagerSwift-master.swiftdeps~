@@ -1,0 +1,20 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "27a885096f82d3df3741788a00c1204d"
+build_time: [1608931421, 570484000]
+inputs:
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift": !dirty [1608931391, 63446888]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager.swift": !dirty [1608931391, 67442719]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift": !dirty [1608931391, 64700870]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift": !dirty [1608931391, 64501683]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift": !dirty [1608931391, 67100842]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift": !dirty [1608931391, 69719188]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift": !dirty [1608931391, 63068403]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQTextView/IQTextView.swift": !dirty [1608931391, 62652992]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift": !dirty [1608931391, 63260401]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift": !dirty [1608931391, 63637345]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift": !dirty [1608931391, 68945475]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift": !dirty [1608931391, 69322571]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift": !dirty [1608931391, 69525611]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift": !dirty [1608931391, 63893385]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift": !dirty [1608931391, 69136935]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIWindow+Hierarchy.swift": !dirty [1608931391, 68755317]

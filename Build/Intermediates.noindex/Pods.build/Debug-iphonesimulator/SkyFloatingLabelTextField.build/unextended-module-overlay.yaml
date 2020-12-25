@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SkyFloatingLabelTextField.build/unextended-module.modulemap",
+    }]
+  }]
+}
