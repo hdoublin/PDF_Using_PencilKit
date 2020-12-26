@@ -11,73 +11,87 @@ depends-top-level:
 - "<"
 - "Array"
 - "Bool"
-- !private "CastingPrecedence"
 - "Element"
 - "UIView"
 - !private "sorted"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["Sa", "Bool"]
-- !private ["Sa", "UIView"]
+- ["Sa", "UIView"]
 - ["Sa", ""]
 - !private ["Sa", "sorted"]
 - ["Sa", "sortedArrayByPosition"]
 - ["Sa", "sortedArrayByTag"]
-- !private ["SK", ""]
+- ["SK", "UIView"]
+- ["SK", ""]
 - !private ["SK", "sorted"]
 - !private ["So15CALayerDelegateP", "frame"]
 - !private ["So15CALayerDelegateP", "tag"]
 - !private ["So6CGRectV", "minX"]
 - !private ["So6CGRectV", "minY"]
+- ["s7CVarArgP", "UIView"]
 - !private ["s7CVarArgP", "frame"]
 - !private ["s7CVarArgP", "sorted"]
 - !private ["s7CVarArgP", "tag"]
-- !private ["Sl", ""]
+- ["Sl", "UIView"]
+- ["Sl", ""]
 - !private ["Sl", "sorted"]
 - !private ["SL", "<"]
 - !private ["SL", "<="]
 - !private ["SL", ">"]
 - !private ["SL", ">="]
 - !private ["SL", ""]
+- ["10Foundation15ContiguousBytesP", "UIView"]
 - !private ["10Foundation15ContiguousBytesP", "sorted"]
+- ["s28CustomDebugStringConvertibleP", "UIView"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "minX"]
 - !private ["s28CustomDebugStringConvertibleP", "minY"]
 - !private ["s28CustomDebugStringConvertibleP", "sorted"]
 - !private ["s28CustomDebugStringConvertibleP", "tag"]
+- ["s17CustomReflectableP", "UIView"]
 - !private ["s17CustomReflectableP", "minX"]
 - !private ["s17CustomReflectableP", "minY"]
 - !private ["s17CustomReflectableP", "sorted"]
+- ["s23CustomStringConvertibleP", "UIView"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - !private ["s23CustomStringConvertibleP", "sorted"]
 - !private ["s23CustomStringConvertibleP", "tag"]
-- !private ["10Foundation12DataProtocolP", ""]
+- ["10Foundation12DataProtocolP", "UIView"]
+- ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "sorted"]
+- ["Se", "UIView"]
 - !private ["Se", "minX"]
 - !private ["Se", "minY"]
 - !private ["Se", "sorted"]
+- ["SE", "UIView"]
 - !private ["SE", "minX"]
 - !private ["SE", "minY"]
 - !private ["SE", "sorted"]
-- !private ["SQ", ""]
+- ["SQ", "UIView"]
+- ["SQ", ""]
 - !private ["SQ", "frame"]
 - !private ["SQ", "minX"]
 - !private ["SQ", "minY"]
 - !private ["SQ", "sorted"]
 - !private ["SQ", "tag"]
-- !private ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", "UIView"]
+- ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["SF", "<"]
 - !private ["SF", "<="]
 - !private ["SF", ">"]
 - !private ["SF", ">="]
+- ["SH", "UIView"]
 - !private ["SH", ""]
 - !private ["SH", "frame"]
 - !private ["SH", "sorted"]
 - !private ["SH", "tag"]
-- !private ["SM", ""]
+- ["SM", "UIView"]
+- ["SM", ""]
 - !private ["SM", "sorted"]
+- ["10Foundation19MutableDataProtocolP", "UIView"]
 - !private ["10Foundation19MutableDataProtocolP", "sorted"]
 - !private ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "frame"]
@@ -91,11 +105,14 @@ depends-member:
 - !private ["So8NSObjectP", "frameForAlignmentRect"]
 - !private ["So8NSObjectP", "tag"]
 - !private ["Sj", ""]
-- !private ["Sk", ""]
+- ["Sk", "UIView"]
+- ["Sk", ""]
 - !private ["Sk", "sorted"]
-- !private ["Sm", ""]
+- ["Sm", "UIView"]
+- ["Sm", ""]
 - !private ["Sm", "sorted"]
-- !private ["ST", ""]
+- ["ST", "UIView"]
+- ["ST", ""]
 - !private ["ST", "sorted"]
 - !private ["s13SignedNumericP", ""]
 - !private ["Sx", ""]
@@ -135,16 +152,21 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "tag"]
 - !private ["So6UIViewC", "frame"]
 - !private ["So6UIViewC", "tag"]
+- ["s14_ArrayProtocolP", "UIView"]
 - !private ["s14_ArrayProtocolP", "sorted"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "minX"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "minY"]
+- ["s24_DestructorSafeContainerP", "UIView"]
 - !private ["s24_DestructorSafeContainerP", "sorted"]
+- ["s19_HasContiguousBytesP", "UIView"]
 - !private ["s19_HasContiguousBytesP", "sorted"]
+- ["s35_HasCustomAnyHashableRepresentationP", "UIView"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "sorted"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tag"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "frame"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tag"]
+- ["s21_ObjectiveCBridgeableP", "UIView"]
 - !private ["s21_ObjectiveCBridgeableP", "minX"]
 - !private ["s21_ObjectiveCBridgeableP", "minY"]
 - !private ["s21_ObjectiveCBridgeableP", "sorted"]
@@ -153,33 +175,33 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - "Sa"
-- !private "SK"
+- "SK"
 - !private "So15CALayerDelegateP"
 - !private "So6CGRectV"
-- !private "s7CVarArgP"
-- !private "Sl"
+- "s7CVarArgP"
+- "Sl"
 - !private "SL"
-- !private "10Foundation15ContiguousBytesP"
-- !private "s28CustomDebugStringConvertibleP"
-- !private "s17CustomReflectableP"
-- !private "s23CustomStringConvertibleP"
-- !private "10Foundation12DataProtocolP"
-- !private "Se"
-- !private "SE"
-- !private "SQ"
-- !private "s25ExpressibleByArrayLiteralP"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
+- "Se"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "SF"
-- !private "SH"
-- !private "SM"
-- !private "10Foundation19MutableDataProtocolP"
+- "SH"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
 - !private "So8NSCodingP"
 - !private "So8NSObjectC"
 - !private "So8NSObjectP"
 - !private "Sj"
-- !private "Sk"
-- !private "Sm"
-- !private "ST"
+- "Sk"
+- "Sm"
+- "ST"
 - !private "s13SignedNumericP"
 - !private "Sx"
 - !private "So29UIAccessibilityIdentificationP"
@@ -197,14 +219,14 @@ depends-nominal:
 - !private "So18UITraitEnvironmentP"
 - !private "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
-- !private "s14_ArrayProtocolP"
+- "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
-- !private "s24_DestructorSafeContainerP"
-- !private "s19_HasContiguousBytesP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s24_DestructorSafeContainerP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
-- !private "s21_ObjectiveCBridgeableP"
+- "s21_ObjectiveCBridgeableP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -238,4 +260,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "bd74836c366cb8b560c5339cc30549c3"
+interface-hash: "2ab4784dbc2c21db6c1033e97a138436"

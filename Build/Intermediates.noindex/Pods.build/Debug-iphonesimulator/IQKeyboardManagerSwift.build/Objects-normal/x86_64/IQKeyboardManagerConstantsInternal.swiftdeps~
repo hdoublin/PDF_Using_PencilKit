@@ -1,69 +1,11 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "IQLayoutGuidePosition"
 provides-nominal:
-- "22IQKeyboardManagerSwift21IQLayoutGuidePositionO"
 provides-member:
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "=="
-- "FloatLiteralType"
-- "IQLayoutGuidePosition"
-- "Int"
-- "IntegerLiteralType"
-- !private "~="
 depends-member:
-- ["SQ", "=="]
-- ["SQ", "Default_RawValue"]
-- ["SQ", "RawValue"]
-- ["SQ", ""]
-- ["SQ", "_Default_RawValue"]
-- ["SQ", "_rawHashValue"]
-- ["SQ", "hash"]
-- ["SQ", "hashValue"]
-- ["SQ", "init"]
-- ["SQ", "rawValue"]
-- ["SH", "=="]
-- ["SH", "Default_RawValue"]
-- ["SH", "RawValue"]
-- ["SH", ""]
-- ["SH", "_Default_RawValue"]
-- ["SH", "_rawHashValue"]
-- ["SH", "hash"]
-- ["SH", "hashValue"]
-- ["SH", "init"]
-- ["SH", "rawValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "=="]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "Default_RawValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "RawValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", ""]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "_Default_RawValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "_rawHashValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "bottom"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "hash"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "hashValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "init"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "none"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "rawValue"]
-- ["22IQKeyboardManagerSwift21IQLayoutGuidePositionO", "top"]
-- ["SY", "=="]
-- ["SY", "Default_RawValue"]
-- ["SY", "RawValue"]
-- ["SY", ""]
-- ["SY", "_Default_RawValue"]
-- ["SY", "_rawHashValue"]
-- ["SY", "hash"]
-- ["SY", "hashValue"]
-- ["SY", "init"]
-- ["SY", "rawValue"]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 depends-nominal:
-- "SQ"
-- "SH"
-- "22IQKeyboardManagerSwift21IQLayoutGuidePositionO"
-- "SY"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -96,4 +38,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "17d9469ebfb071b2b736d7f6a46783fc"
+interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"

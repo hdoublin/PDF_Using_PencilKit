@@ -20,6 +20,7 @@ depends-top-level:
 - "IQPreviousNextDisplayMode"
 - "Int"
 - "IntegerLiteralType"
+- !private "unsafeBitCast"
 - !private "~="
 depends-member:
 - ["SQ", "=="]
@@ -32,6 +33,7 @@ depends-member:
 - ["SQ", "hashValue"]
 - ["SQ", "init"]
 - ["SQ", "rawValue"]
+- !private ["SQ", "unsafeBitCast"]
 - ["SH", "=="]
 - ["SH", "Default_RawValue"]
 - ["SH", "RawValue"]
@@ -42,6 +44,7 @@ depends-member:
 - ["SH", "hashValue"]
 - ["SH", "init"]
 - ["SH", "rawValue"]
+- !private ["SH", "unsafeBitCast"]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "=="]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "Default_RawValue"]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "RawValue"]
@@ -55,21 +58,22 @@ depends-member:
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "hashValue"]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "init"]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "rawValue"]
+- !private ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "unsafeBitCast"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "=="]
-- ["22IQKeyboardManagerSwift12IQEnableModeO", "Default"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "Default_RawValue"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "RawValue"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", ""]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "_Default_RawValue"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "_rawHashValue"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "default"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "disabled"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "enabled"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "hash"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "hashValue"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "init"]
 - ["22IQKeyboardManagerSwift12IQEnableModeO", "rawValue"]
+- !private ["22IQKeyboardManagerSwift12IQEnableModeO", "unsafeBitCast"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "=="]
-- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "Default"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "Default_RawValue"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "RawValue"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", ""]
@@ -77,10 +81,12 @@ depends-member:
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "_rawHashValue"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "alwaysHide"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "alwaysShow"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "default"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "hash"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "hashValue"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "init"]
 - ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "rawValue"]
+- !private ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "unsafeBitCast"]
 - ["SY", "=="]
 - ["SY", "Default_RawValue"]
 - ["SY", "RawValue"]
@@ -91,6 +97,7 @@ depends-member:
 - ["SY", "hashValue"]
 - ["SY", "init"]
 - ["SY", "rawValue"]
+- !private ["SY", "unsafeBitCast"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 depends-nominal:
 - "SQ"
@@ -132,4 +139,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d6bb3268a703f6c941662915e79933a4"
+interface-hash: "f7447d9858e44e6bb5ffb34030dd0dad"

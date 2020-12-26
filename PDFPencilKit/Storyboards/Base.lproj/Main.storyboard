@@ -348,6 +348,7 @@
                         <outlet property="sideContainerView" destination="mwU-zo-gr5" id="I1h-6c-Zga"/>
                         <outlet property="tableView" destination="AGd-cU-LDw" id="zSS-h6-DMa"/>
                         <segue destination="H8s-y5-84r" kind="show" identifier="toPDFViewController" id="Bvm-Md-Kux"/>
+                        <segue destination="J8o-yO-zwE" kind="show" identifier="toNewNoteViewController" id="cqL-LU-r5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -357,18 +358,90 @@
         <!--View Controller-->
         <scene sceneID="q2J-ae-at5">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="H8s-y5-84r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PDFViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H8s-y5-84r" customClass="PDFViewController" customModule="PDFPencilKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uvj-R5-byc">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfU-pk-IgW">
+                                <rect key="frame" x="0.0" y="50" width="1366" height="974"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeu-Uj-5gc">
+                                <rect key="frame" x="40" y="90" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4yE-q2-UPz"/>
+                                    <constraint firstAttribute="height" constant="80" id="QrA-jY-O0E"/>
+                                </constraints>
+                                <color key="tintColor" white="0.040933098590000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="home"/>
+                                <connections>
+                                    <action selector="homeBtnPressed:" destination="H8s-y5-84r" eventType="touchUpInside" id="hX9-SA-aUI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J3a-HV-ekd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mfU-pk-IgW" firstAttribute="top" secondItem="J3a-HV-ekd" secondAttribute="top" id="85b-Gp-Iba"/>
+                            <constraint firstItem="Jeu-Uj-5gc" firstAttribute="top" secondItem="J3a-HV-ekd" secondAttribute="top" constant="40" id="YbK-O9-Dtj"/>
+                            <constraint firstItem="Jeu-Uj-5gc" firstAttribute="leading" secondItem="J3a-HV-ekd" secondAttribute="leading" constant="40" id="clo-Q8-BXh"/>
+                            <constraint firstItem="mfU-pk-IgW" firstAttribute="leading" secondItem="J3a-HV-ekd" secondAttribute="leading" id="jjH-tt-mcq"/>
+                            <constraint firstItem="J3a-HV-ekd" firstAttribute="bottom" secondItem="mfU-pk-IgW" secondAttribute="bottom" id="oj0-My-EQ9"/>
+                            <constraint firstItem="J3a-HV-ekd" firstAttribute="trailing" secondItem="mfU-pk-IgW" secondAttribute="trailing" id="wzg-Ll-44s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fRR-kl-ftj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grG-HC-oQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="799"/>
+            <point key="canvasLocation" x="833.67496339677882" y="795.703125"/>
+        </scene>
+        <!--New Note View Controller-->
+        <scene sceneID="y5v-vy-pzI">
+            <objects>
+                <viewController storyboardIdentifier="NewNoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8o-yO-zwE" customClass="NewNoteViewController" customModule="PDFPencilKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mfa-T3-ZMt">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqG-wL-2DK" customClass="PKCanvas" customModule="PDFPencilKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="1366" height="974"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDV-nZ-5c2">
+                                <rect key="frame" x="40" y="90" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0EG-gm-rpl"/>
+                                    <constraint firstAttribute="width" constant="80" id="YxB-3W-7X7"/>
+                                </constraints>
+                                <color key="tintColor" white="0.040933098590000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="home"/>
+                                <connections>
+                                    <action selector="homeBtnPressed:" destination="J8o-yO-zwE" eventType="touchUpInside" id="3mF-Lb-6zN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EGg-GX-kll"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BDV-nZ-5c2" firstAttribute="leading" secondItem="EGg-GX-kll" secondAttribute="leading" constant="40" id="9tY-Yk-YAJ"/>
+                            <constraint firstItem="BDV-nZ-5c2" firstAttribute="top" secondItem="EGg-GX-kll" secondAttribute="top" constant="40" id="O4r-us-B3W"/>
+                            <constraint firstItem="YqG-wL-2DK" firstAttribute="leading" secondItem="EGg-GX-kll" secondAttribute="leading" id="aOw-cb-CRM"/>
+                            <constraint firstItem="EGg-GX-kll" firstAttribute="trailing" secondItem="YqG-wL-2DK" secondAttribute="trailing" id="eNf-JW-QUt"/>
+                            <constraint firstItem="YqG-wL-2DK" firstAttribute="top" secondItem="EGg-GX-kll" secondAttribute="top" id="kGK-Lt-lBJ"/>
+                            <constraint firstItem="YqG-wL-2DK" firstAttribute="bottom" secondItem="EGg-GX-kll" secondAttribute="bottom" id="n13-5i-x7s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z4M-N1-yxL"/>
+                    <connections>
+                        <outlet property="homeBtn" destination="BDV-nZ-5c2" id="vN2-Wa-VVL"/>
+                        <outlet property="pencilBoardView" destination="YqG-wL-2DK" id="ehs-o3-xjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTY-sG-lRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825.76866764275246" y="1488.8671875"/>
         </scene>
         <!--View Controller Copy-->
         <scene sceneID="3KN-HB-coQ">
@@ -632,10 +705,10 @@
             </objects>
             <point key="canvasLocation" x="140.99560761346999" y="95.5078125"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Alert View Controller-->
         <scene sceneID="TrX-8p-DHA">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="cfA-aQ-xFf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomAlertViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cfA-aQ-xFf" customClass="CustomAlertViewController" customModule="PDFPencilKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kMz-na-tnh">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -659,8 +732,11 @@
                                             <constraint firstAttribute="width" constant="40" id="ldR-7Q-aW3"/>
                                         </constraints>
                                         <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeBtnPressed:" destination="cfA-aQ-xFf" eventType="touchUpInside" id="e3h-Fx-hql"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EX0-o1-k59">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EX0-o1-k59" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                         <rect key="frame" x="30" y="110" width="540" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="xYt-D3-p4b"/>
@@ -677,7 +753,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4Y-0F-TNn">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4Y-0F-TNn">
                                         <rect key="frame" x="206" y="220" width="62" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="hAs-gN-vUa"/>
@@ -685,6 +761,9 @@
                                         </constraints>
                                         <color key="onTintColor" white="0.040933098591549297" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="thumbTintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="addDateSwitchSelected:" destination="cfA-aQ-xFf" eventType="valueChanged" id="nmP-Zg-fOS"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" name="BarColor"/>
@@ -712,17 +791,29 @@
                             <constraint firstItem="ONb-oM-N68" firstAttribute="centerY" secondItem="kMz-na-tnh" secondAttribute="centerY" id="oDn-1E-gvO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NameTxt" destination="EX0-o1-k59" id="05O-9E-RU8"/>
+                        <outlet property="addDateSwitch" destination="z4Y-0F-TNn" id="N6n-hM-R5j"/>
+                        <outlet property="alertViewContainer" destination="ONb-oM-N68" id="gH6-Am-SSf"/>
+                        <outlet property="closeBtn" destination="gAg-mE-O4e" id="7um-qD-fdX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izg-Yw-bp1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154.61200585651537" y="786.9140625"/>
+            <point key="canvasLocation" x="156" y="796"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="EX0-o1-k59">
+            <size key="intrinsicContentSize" width="540" height="65.474609375"/>
+        </designable>
+    </designables>
     <resources>
         <image name="FileIcon" width="50" height="50"/>
         <image name="PdfIcon" width="50" height="50"/>
         <image name="closeBtn" width="24" height="24"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="home" width="24" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

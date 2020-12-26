@@ -9,21 +9,62 @@ import UIKit
 
 class NewNoteViewController: UIViewController {
 
+    var pencilKitCanvas =  PKCanvas()
+    @IBOutlet weak var pencilBoardView: PKCanvas!
+    @IBOutlet weak var homeBtn: UIButton!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - iOS Life Cycle
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        addPencilKit()
     }
-    */
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateCanvasOrientation(with: view.bounds)
+        view.bringSubviewToFront(homeBtn)
+    }
+    
+    //MARK: - iOS override properties
+    override var prefersHomeIndicatorAutoHidden: Bool {
+          return true
+      }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true;
+    }
+    
+    //MARK: -  Setup Functions
 
+    private func addPencilKit() {
+        view.backgroundColor = .clear
+
+        pencilKitCanvas  = createPencilKitCanvas(frame: view.frame, delegate: self)
+        view.addSubview(pencilKitCanvas)
+    }
+    
+    @IBAction func homeBtnPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "PDFPencilKit", message: "Do you wish to continue to ", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (element) in
+            //... save action
+            
+
+
+
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default) { (element) in
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+    }
+    
 }
+
+extension NewNoteViewController: PencilKitInterface { }
+
+extension NewNoteViewController: PencilKitDelegate { }

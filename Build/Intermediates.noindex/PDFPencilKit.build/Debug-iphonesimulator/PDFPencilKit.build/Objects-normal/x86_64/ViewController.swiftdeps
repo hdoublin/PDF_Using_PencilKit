@@ -54,6 +54,7 @@ depends-top-level:
 - "UILabel"
 - !private "UINib"
 - "UISearchBar"
+- !private "UIStoryboard"
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewDataSource"
@@ -75,22 +76,21 @@ depends-top-level:
 - !private "performSegue"
 - !private "plusBtnInContent"
 - !private "plusBtnInSide"
+- !private "present"
 - !private "print"
 - !private "setupUIs"
 - "sideCell"
 - !private "sideContainerView"
 - !private "tableView"
 depends-member:
-- !private ["s18AdditiveArithmeticP", ""]
 - !private ["So22UIViewAnimationOptionsV", "ArrayLiteralElement"]
 - !private ["So22UIViewAnimationOptionsV", "Element"]
 - !private ["So22UIViewAnimationOptionsV", "init"]
-- ["SK", ""]
+- !private ["SK", ""]
 - !private ["SK", "row"]
 - !private ["So7CALayerC", "borderColor"]
 - !private ["So7CALayerC", "borderWidth"]
 - !private ["So7CALayerC", "cornerRadius"]
-- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
 - !private ["So15CALayerDelegateP", "addTarget"]
 - !private ["So15CALayerDelegateP", "animate"]
@@ -130,6 +130,7 @@ depends-member:
 - !private ["s7CVarArgP", "UIColor"]
 - !private ["s7CVarArgP", "UIEdgeInsets"]
 - !private ["s7CVarArgP", "UINib"]
+- !private ["s7CVarArgP", "UIStoryboard"]
 - !private ["s7CVarArgP", "UITapGestureRecognizer"]
 - !private ["s7CVarArgP", "UIView"]
 - ["s7CVarArgP", ""]
@@ -168,6 +169,7 @@ depends-member:
 - ["s7CVarArgP", "indexTitles"]
 - ["s7CVarArgP", "indexTitlesForCollectionView"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "instantiateViewController"]
 - !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "isUserInteractionEnabled"]
 - !private ["s7CVarArgP", "itemSize"]
@@ -183,6 +185,7 @@ depends-member:
 - !private ["s7CVarArgP", "performSegue"]
 - !private ["s7CVarArgP", "plusBtnInContent"]
 - !private ["s7CVarArgP", "plusBtnInSide"]
+- !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "register"]
 - !private ["s7CVarArgP", "reloadData"]
@@ -215,9 +218,9 @@ depends-member:
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
 - !private ["s7CVarArgP", "viewWillAppear"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "row"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["SL", "row"]
 - !private ["So17UIViewContentModeV", "scaleToFill"]
 - !private ["s28CustomDebugStringConvertibleP", "CGSize"]
@@ -226,6 +229,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - !private ["s28CustomDebugStringConvertibleP", "UIEdgeInsets"]
 - !private ["s28CustomDebugStringConvertibleP", "UINib"]
+- !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
 - !private ["s28CustomDebugStringConvertibleP", "UITapGestureRecognizer"]
 - !private ["s28CustomDebugStringConvertibleP", "UIView"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -264,6 +268,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "indexTitles"]
 - ["s28CustomDebugStringConvertibleP", "indexTitlesForCollectionView"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "instantiateViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "isUserInteractionEnabled"]
 - !private ["s28CustomDebugStringConvertibleP", "itemSize"]
@@ -279,6 +284,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "performSegue"]
 - !private ["s28CustomDebugStringConvertibleP", "plusBtnInContent"]
 - !private ["s28CustomDebugStringConvertibleP", "plusBtnInSide"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "register"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadData"]
@@ -334,6 +340,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIColor"]
 - !private ["s23CustomStringConvertibleP", "UIEdgeInsets"]
 - !private ["s23CustomStringConvertibleP", "UINib"]
+- !private ["s23CustomStringConvertibleP", "UIStoryboard"]
 - !private ["s23CustomStringConvertibleP", "UITapGestureRecognizer"]
 - !private ["s23CustomStringConvertibleP", "UIView"]
 - ["s23CustomStringConvertibleP", ""]
@@ -374,6 +381,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "indexTitles"]
 - ["s23CustomStringConvertibleP", "indexTitlesForCollectionView"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "instantiateViewController"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "isUserInteractionEnabled"]
 - !private ["s23CustomStringConvertibleP", "itemSize"]
@@ -389,6 +397,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "performSegue"]
 - !private ["s23CustomStringConvertibleP", "plusBtnInContent"]
 - !private ["s23CustomStringConvertibleP", "plusBtnInSide"]
+- !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "register"]
 - !private ["s23CustomStringConvertibleP", "reloadData"]
@@ -464,6 +473,7 @@ depends-member:
 - !private ["SQ", "UIColor"]
 - !private ["SQ", "UIEdgeInsets"]
 - !private ["SQ", "UINib"]
+- !private ["SQ", "UIStoryboard"]
 - !private ["SQ", "UITapGestureRecognizer"]
 - !private ["SQ", "UIView"]
 - ["SQ", ""]
@@ -503,6 +513,7 @@ depends-member:
 - ["SQ", "indexTitles"]
 - ["SQ", "indexTitlesForCollectionView"]
 - !private ["SQ", "init"]
+- !private ["SQ", "instantiateViewController"]
 - !private ["SQ", "isHidden"]
 - !private ["SQ", "isUserInteractionEnabled"]
 - !private ["SQ", "itemSize"]
@@ -518,6 +529,7 @@ depends-member:
 - !private ["SQ", "performSegue"]
 - !private ["SQ", "plusBtnInContent"]
 - !private ["SQ", "plusBtnInSide"]
+- !private ["SQ", "present"]
 - !private ["SQ", "print"]
 - !private ["SQ", "register"]
 - !private ["SQ", "reloadData"]
@@ -563,12 +575,10 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s25ExpressibleByArrayLiteralP", "topRight"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
-- !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
-- !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addGestureRecognizer"]
 - !private ["s23ExpressibleByNilLiteralP", "addTarget"]
@@ -585,17 +595,17 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "setCollectionViewLayout"]
 - !private ["s23ExpressibleByNilLiteralP", "text"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
-- !private ["SF", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SH", "CGSize"]
 - !private ["SH", "NewContainerView"]
 - !private ["SH", "UICollectionViewFlowLayout"]
 - !private ["SH", "UIColor"]
 - !private ["SH", "UIEdgeInsets"]
 - !private ["SH", "UINib"]
+- !private ["SH", "UIStoryboard"]
 - !private ["SH", "UITapGestureRecognizer"]
 - !private ["SH", "UIView"]
 - ["SH", ""]
@@ -634,6 +644,7 @@ depends-member:
 - ["SH", "indexTitles"]
 - ["SH", "indexTitlesForCollectionView"]
 - !private ["SH", "init"]
+- !private ["SH", "instantiateViewController"]
 - !private ["SH", "isHidden"]
 - !private ["SH", "isUserInteractionEnabled"]
 - !private ["SH", "itemSize"]
@@ -649,6 +660,7 @@ depends-member:
 - !private ["SH", "performSegue"]
 - !private ["SH", "plusBtnInContent"]
 - !private ["SH", "plusBtnInSide"]
+- !private ["SH", "present"]
 - !private ["SH", "print"]
 - !private ["SH", "register"]
 - !private ["SH", "reloadData"]
@@ -684,7 +696,7 @@ depends-member:
 - ["SH", "viewForZoomingInScrollView"]
 - !private ["SH", "viewWillAppear"]
 - !private ["10Foundation9IndexPathV", "row"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["SM", "row"]
 - ["So8NSCodingP", "Bool"]
 - ["So8NSCodingP", "CGFloat"]
@@ -701,6 +713,7 @@ depends-member:
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "UINib"]
 - ["So8NSCodingP", "UISearchBar"]
+- !private ["So8NSCodingP", "UIStoryboard"]
 - ["So8NSCodingP", "UITableView"]
 - ["So8NSCodingP", "UITableViewCell"]
 - !private ["So8NSCodingP", "UITapGestureRecognizer"]
@@ -762,6 +775,7 @@ depends-member:
 - !private ["So8NSCodingP", "performSegue"]
 - ["So8NSCodingP", "plusBtnInContent"]
 - ["So8NSCodingP", "plusBtnInSide"]
+- !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "register"]
 - !private ["So8NSCodingP", "registerClass"]
@@ -816,6 +830,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UILabel"]
 - !private ["So26NSExtensionRequestHandlingP", "UINib"]
 - ["So26NSExtensionRequestHandlingP", "UISearchBar"]
+- !private ["So26NSExtensionRequestHandlingP", "UIStoryboard"]
 - ["So26NSExtensionRequestHandlingP", "UITableView"]
 - ["So26NSExtensionRequestHandlingP", "UITableViewCell"]
 - !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
@@ -847,6 +862,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - ["So26NSExtensionRequestHandlingP", "plusBtnInContent"]
 - ["So26NSExtensionRequestHandlingP", "plusBtnInSide"]
+- !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDecelerating"]
@@ -895,6 +911,7 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - !private ["So8NSObjectC", "UINib"]
 - ["So8NSObjectC", "UISearchBar"]
+- !private ["So8NSObjectC", "UIStoryboard"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
 - !private ["So8NSObjectC", "UITapGestureRecognizer"]
@@ -942,6 +959,8 @@ depends-member:
 - ["So8NSObjectC", "indexTitles"]
 - ["So8NSObjectC", "indexTitlesForCollectionView"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "instantiateViewController"]
+- !private ["So8NSObjectC", "instantiateViewControllerWithIdentifier"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "isUserInteractionEnabled"]
 - !private ["So8NSObjectC", "itemSize"]
@@ -960,6 +979,8 @@ depends-member:
 - !private ["So8NSObjectC", "performSegueWithIdentifier"]
 - ["So8NSObjectC", "plusBtnInContent"]
 - ["So8NSObjectC", "plusBtnInSide"]
+- !private ["So8NSObjectC", "present"]
+- !private ["So8NSObjectC", "presentViewController"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "register"]
 - !private ["So8NSObjectC", "registerClass"]
@@ -990,6 +1011,7 @@ depends-member:
 - ["So8NSObjectC", "setupUIs"]
 - !private ["So8NSObjectC", "sideCell"]
 - ["So8NSObjectC", "sideContainerView"]
+- !private ["So8NSObjectC", "storyboardWithName"]
 - ["So8NSObjectC", "tableView"]
 - ["So8NSObjectC", "tableViewDidEndMultipleSelectionInteraction"]
 - !private ["So8NSObjectC", "text"]
@@ -1012,6 +1034,7 @@ depends-member:
 - ["So8NSObjectP", "UILabel"]
 - !private ["So8NSObjectP", "UINib"]
 - ["So8NSObjectP", "UISearchBar"]
+- !private ["So8NSObjectP", "UIStoryboard"]
 - ["So8NSObjectP", "UITableView"]
 - ["So8NSObjectP", "UITableViewCell"]
 - !private ["So8NSObjectP", "UITapGestureRecognizer"]
@@ -1059,6 +1082,8 @@ depends-member:
 - ["So8NSObjectP", "indexTitles"]
 - ["So8NSObjectP", "indexTitlesForCollectionView"]
 - ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "instantiateViewController"]
+- !private ["So8NSObjectP", "instantiateViewControllerWithIdentifier"]
 - !private ["So8NSObjectP", "isHidden"]
 - !private ["So8NSObjectP", "isUserInteractionEnabled"]
 - !private ["So8NSObjectP", "itemSize"]
@@ -1077,6 +1102,8 @@ depends-member:
 - !private ["So8NSObjectP", "performSegueWithIdentifier"]
 - ["So8NSObjectP", "plusBtnInContent"]
 - ["So8NSObjectP", "plusBtnInSide"]
+- !private ["So8NSObjectP", "present"]
+- !private ["So8NSObjectP", "presentViewController"]
 - !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "register"]
 - !private ["So8NSObjectP", "registerClass"]
@@ -1107,6 +1134,7 @@ depends-member:
 - ["So8NSObjectP", "setupUIs"]
 - !private ["So8NSObjectP", "sideCell"]
 - ["So8NSObjectP", "sideContainerView"]
+- !private ["So8NSObjectP", "storyboardWithName"]
 - ["So8NSObjectP", "tableView"]
 - ["So8NSObjectP", "tableViewDidEndMultipleSelectionInteraction"]
 - !private ["So8NSObjectP", "text"]
@@ -1119,7 +1147,6 @@ depends-member:
 - !private ["So14NSSecureCodingP", "borderWidth"]
 - !private ["So14NSSecureCodingP", "cgColor"]
 - !private ["So14NSSecureCodingP", "cornerRadius"]
-- !private ["Sj", ""]
 - !private ["s9OptionSetP", "ArrayLiteralElement"]
 - !private ["s9OptionSetP", "Element"]
 - !private ["s9OptionSetP", "bottomRight"]
@@ -1150,7 +1177,7 @@ depends-member:
 - !private ["SY", "topRight"]
 - !private ["SY", "touchUpInside"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "row"]
 - !private ["s10SetAlgebraP", "ArrayLiteralElement"]
 - !private ["s10SetAlgebraP", "Element"]
@@ -1159,20 +1186,17 @@ depends-member:
 - !private ["s10SetAlgebraP", "init"]
 - !private ["s10SetAlgebraP", "topRight"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
-- !private ["s13SignedNumericP", ""]
-- !private ["Sx", ""]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["s27StringInterpolationProtocolP", "init"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "contentMode"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
-- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addGestureRecognizer"]
 - !private ["So29UIAccessibilityIdentificationP", "addTarget"]
 - !private ["So29UIAccessibilityIdentificationP", "animate"]
@@ -1202,7 +1226,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "roundCorners"]
 - !private ["So29UIAccessibilityIdentificationP", "setCollectionViewLayout"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addGestureRecognizer"]
 - !private ["So12UIAppearanceP", "addTarget"]
 - !private ["So12UIAppearanceP", "animate"]
@@ -1247,6 +1270,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UILabel"]
 - !private ["So21UIAppearanceContainerP", "UINib"]
 - ["So21UIAppearanceContainerP", "UISearchBar"]
+- !private ["So21UIAppearanceContainerP", "UIStoryboard"]
 - ["So21UIAppearanceContainerP", "UITableView"]
 - ["So21UIAppearanceContainerP", "UITableViewCell"]
 - !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
@@ -1300,6 +1324,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "performSegue"]
 - ["So21UIAppearanceContainerP", "plusBtnInContent"]
 - ["So21UIAppearanceContainerP", "plusBtnInSide"]
+- !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "register"]
 - !private ["So21UIAppearanceContainerP", "registerClass"]
@@ -1358,6 +1383,7 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "UIColor"]
 - !private ["So26UICollectionViewDataSourceP", "UIEdgeInsets"]
 - !private ["So26UICollectionViewDataSourceP", "UINib"]
+- !private ["So26UICollectionViewDataSourceP", "UIStoryboard"]
 - !private ["So26UICollectionViewDataSourceP", "UITapGestureRecognizer"]
 - !private ["So26UICollectionViewDataSourceP", "UIView"]
 - ["So26UICollectionViewDataSourceP", ""]
@@ -1386,6 +1412,7 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "performSegue"]
 - ["So26UICollectionViewDataSourceP", "plusBtnInContent"]
 - ["So26UICollectionViewDataSourceP", "plusBtnInSide"]
+- !private ["So26UICollectionViewDataSourceP", "present"]
 - !private ["So26UICollectionViewDataSourceP", "print"]
 - ["So26UICollectionViewDataSourceP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So26UICollectionViewDataSourceP", "scrollViewDidEndDecelerating"]
@@ -1419,6 +1446,7 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "UIColor"]
 - !private ["So24UICollectionViewDelegateP", "UIEdgeInsets"]
 - !private ["So24UICollectionViewDelegateP", "UINib"]
+- !private ["So24UICollectionViewDelegateP", "UIStoryboard"]
 - !private ["So24UICollectionViewDelegateP", "UITapGestureRecognizer"]
 - !private ["So24UICollectionViewDelegateP", "UIView"]
 - ["So24UICollectionViewDelegateP", ""]
@@ -1447,6 +1475,7 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "performSegue"]
 - ["So24UICollectionViewDelegateP", "plusBtnInContent"]
 - ["So24UICollectionViewDelegateP", "plusBtnInSide"]
+- !private ["So24UICollectionViewDelegateP", "present"]
 - !private ["So24UICollectionViewDelegateP", "print"]
 - ["So24UICollectionViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So24UICollectionViewDelegateP", "scrollViewDidEndDecelerating"]
@@ -1502,6 +1531,7 @@ depends-member:
 - ["So18UIContentContainerP", "UILabel"]
 - !private ["So18UIContentContainerP", "UINib"]
 - ["So18UIContentContainerP", "UISearchBar"]
+- !private ["So18UIContentContainerP", "UIStoryboard"]
 - ["So18UIContentContainerP", "UITableView"]
 - ["So18UIContentContainerP", "UITableViewCell"]
 - !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
@@ -1533,6 +1563,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "performSegue"]
 - ["So18UIContentContainerP", "plusBtnInContent"]
 - ["So18UIContentContainerP", "plusBtnInSide"]
+- !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "print"]
 - ["So18UIContentContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIContentContainerP", "scrollViewDidEndDecelerating"]
@@ -1571,7 +1602,6 @@ depends-member:
 - ["So9UIControlC", ""]
 - !private ["So9UIControlC", "addTarget"]
 - !private ["So9UIControlC", "layer"]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addGestureRecognizer"]
 - !private ["So17UICoordinateSpaceP", "addTarget"]
 - !private ["So17UICoordinateSpaceP", "animate"]
@@ -1609,7 +1639,6 @@ depends-member:
 - !private ["So23UIDataSourceTranslatingP", "register"]
 - !private ["So23UIDataSourceTranslatingP", "reloadData"]
 - !private ["So23UIDataSourceTranslatingP", "setCollectionViewLayout"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addGestureRecognizer"]
 - !private ["So13UIDynamicItemP", "addTarget"]
 - !private ["So13UIDynamicItemP", "animate"]
@@ -1655,6 +1684,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - !private ["So18UIFocusEnvironmentP", "UINib"]
 - ["So18UIFocusEnvironmentP", "UISearchBar"]
+- !private ["So18UIFocusEnvironmentP", "UIStoryboard"]
 - ["So18UIFocusEnvironmentP", "UITableView"]
 - ["So18UIFocusEnvironmentP", "UITableViewCell"]
 - !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
@@ -1708,6 +1738,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
 - ["So18UIFocusEnvironmentP", "plusBtnInContent"]
 - ["So18UIFocusEnvironmentP", "plusBtnInSide"]
+- !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "register"]
 - !private ["So18UIFocusEnvironmentP", "registerClass"]
@@ -1744,7 +1775,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "viewForZooming"]
 - ["So18UIFocusEnvironmentP", "viewForZoomingInScrollView"]
 - ["So18UIFocusEnvironmentP", "viewWillAppear"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addGestureRecognizer"]
 - !private ["So11UIFocusItemP", "addTarget"]
 - !private ["So11UIFocusItemP", "animate"]
@@ -1774,7 +1804,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "roundCorners"]
 - !private ["So11UIFocusItemP", "setCollectionViewLayout"]
 - !private ["So11UIFocusItemP", "text"]
-- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addGestureRecognizer"]
 - !private ["So20UIFocusItemContainerP", "addTarget"]
 - !private ["So20UIFocusItemContainerP", "animate"]
@@ -1804,7 +1834,6 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "roundCorners"]
 - !private ["So20UIFocusItemContainerP", "setCollectionViewLayout"]
 - !private ["So20UIFocusItemContainerP", "text"]
-- !private ["So30UIFocusItemScrollableContainerP", ""]
 - !private ["So30UIFocusItemScrollableContainerP", "dataSource"]
 - !private ["So30UIFocusItemScrollableContainerP", "delegate"]
 - !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCell"]
@@ -1828,7 +1857,6 @@ depends-member:
 - !private ["So7UILabelC", "addGestureRecognizer"]
 - !private ["So7UILabelC", "isUserInteractionEnabled"]
 - !private ["So7UILabelC", "text"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addGestureRecognizer"]
 - !private ["So24UILargeContentViewerItemP", "addTarget"]
 - !private ["So24UILargeContentViewerItemP", "animate"]
@@ -1875,6 +1903,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UINib"]
 - ["So30UIPasteConfigurationSupportingP", "UISearchBar"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIStoryboard"]
 - ["So30UIPasteConfigurationSupportingP", "UITableView"]
 - ["So30UIPasteConfigurationSupportingP", "UITableViewCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
@@ -1930,6 +1959,8 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "performSegueWithIdentifier"]
 - ["So30UIPasteConfigurationSupportingP", "plusBtnInContent"]
 - ["So30UIPasteConfigurationSupportingP", "plusBtnInSide"]
+- !private ["So30UIPasteConfigurationSupportingP", "present"]
+- !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "register"]
 - !private ["So30UIPasteConfigurationSupportingP", "registerClass"]
@@ -1986,6 +2017,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - !private ["So11UIResponderC", "UINib"]
 - ["So11UIResponderC", "UISearchBar"]
+- !private ["So11UIResponderC", "UIStoryboard"]
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", "UITableViewCell"]
 - !private ["So11UIResponderC", "UITapGestureRecognizer"]
@@ -2041,6 +2073,8 @@ depends-member:
 - !private ["So11UIResponderC", "performSegueWithIdentifier"]
 - ["So11UIResponderC", "plusBtnInContent"]
 - ["So11UIResponderC", "plusBtnInSide"]
+- !private ["So11UIResponderC", "present"]
+- !private ["So11UIResponderC", "presentViewController"]
 - !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "register"]
 - !private ["So11UIResponderC", "registerClass"]
@@ -2092,6 +2126,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UINib"]
 - ["So30UIResponderStandardEditActionsP", "UISearchBar"]
+- !private ["So30UIResponderStandardEditActionsP", "UIStoryboard"]
 - ["So30UIResponderStandardEditActionsP", "UITableView"]
 - ["So30UIResponderStandardEditActionsP", "UITableViewCell"]
 - !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
@@ -2147,6 +2182,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "performSegueWithIdentifier"]
 - ["So30UIResponderStandardEditActionsP", "plusBtnInContent"]
 - ["So30UIResponderStandardEditActionsP", "plusBtnInSide"]
+- !private ["So30UIResponderStandardEditActionsP", "present"]
+- !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "register"]
 - !private ["So30UIResponderStandardEditActionsP", "registerClass"]
@@ -2204,6 +2241,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "UIColor"]
 - !private ["So20UIScrollViewDelegateP", "UIEdgeInsets"]
 - !private ["So20UIScrollViewDelegateP", "UINib"]
+- !private ["So20UIScrollViewDelegateP", "UIStoryboard"]
 - !private ["So20UIScrollViewDelegateP", "UITapGestureRecognizer"]
 - !private ["So20UIScrollViewDelegateP", "UIView"]
 - ["So20UIScrollViewDelegateP", ""]
@@ -2232,6 +2270,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "performSegue"]
 - ["So20UIScrollViewDelegateP", "plusBtnInContent"]
 - ["So20UIScrollViewDelegateP", "plusBtnInSide"]
+- !private ["So20UIScrollViewDelegateP", "present"]
 - !private ["So20UIScrollViewDelegateP", "print"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidEndDecelerating"]
@@ -2284,6 +2323,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UILabel"]
 - !private ["So16UIStateRestoringP", "UINib"]
 - ["So16UIStateRestoringP", "UISearchBar"]
+- !private ["So16UIStateRestoringP", "UIStoryboard"]
 - ["So16UIStateRestoringP", "UITableView"]
 - ["So16UIStateRestoringP", "UITableViewCell"]
 - !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
@@ -2315,6 +2355,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "performSegue"]
 - ["So16UIStateRestoringP", "plusBtnInContent"]
 - ["So16UIStateRestoringP", "plusBtnInSide"]
+- !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "print"]
 - ["So16UIStateRestoringP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDecelerating"]
@@ -2344,6 +2385,8 @@ depends-member:
 - ["So16UIStateRestoringP", "viewForZooming"]
 - ["So16UIStateRestoringP", "viewForZoomingInScrollView"]
 - ["So16UIStateRestoringP", "viewWillAppear"]
+- !private ["So12UIStoryboardC", "init"]
+- !private ["So12UIStoryboardC", "instantiateViewController"]
 - !private ["So11UITableViewC", "dataSource"]
 - !private ["So11UITableViewC", "delegate"]
 - !private ["So11UITableViewC", "dequeueReusableCell"]
@@ -2359,6 +2402,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "UIColor"]
 - !private ["So21UITableViewDataSourceP", "UIEdgeInsets"]
 - !private ["So21UITableViewDataSourceP", "UINib"]
+- !private ["So21UITableViewDataSourceP", "UIStoryboard"]
 - !private ["So21UITableViewDataSourceP", "UITapGestureRecognizer"]
 - !private ["So21UITableViewDataSourceP", "UIView"]
 - ["So21UITableViewDataSourceP", ""]
@@ -2387,6 +2431,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "performSegue"]
 - ["So21UITableViewDataSourceP", "plusBtnInContent"]
 - ["So21UITableViewDataSourceP", "plusBtnInSide"]
+- !private ["So21UITableViewDataSourceP", "present"]
 - !private ["So21UITableViewDataSourceP", "print"]
 - ["So21UITableViewDataSourceP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So21UITableViewDataSourceP", "scrollViewDidEndDecelerating"]
@@ -2420,6 +2465,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "UIColor"]
 - !private ["So19UITableViewDelegateP", "UIEdgeInsets"]
 - !private ["So19UITableViewDelegateP", "UINib"]
+- !private ["So19UITableViewDelegateP", "UIStoryboard"]
 - !private ["So19UITableViewDelegateP", "UITapGestureRecognizer"]
 - !private ["So19UITableViewDelegateP", "UIView"]
 - ["So19UITableViewDelegateP", ""]
@@ -2448,6 +2494,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "performSegue"]
 - ["So19UITableViewDelegateP", "plusBtnInContent"]
 - ["So19UITableViewDelegateP", "plusBtnInSide"]
+- !private ["So19UITableViewDelegateP", "present"]
 - !private ["So19UITableViewDelegateP", "print"]
 - ["So19UITableViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So19UITableViewDelegateP", "scrollViewDidEndDecelerating"]
@@ -2491,6 +2538,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UILabel"]
 - !private ["So18UITraitEnvironmentP", "UINib"]
 - ["So18UITraitEnvironmentP", "UISearchBar"]
+- !private ["So18UITraitEnvironmentP", "UIStoryboard"]
 - ["So18UITraitEnvironmentP", "UITableView"]
 - ["So18UITraitEnvironmentP", "UITableViewCell"]
 - !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
@@ -2544,6 +2592,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "performSegue"]
 - ["So18UITraitEnvironmentP", "plusBtnInContent"]
 - ["So18UITraitEnvironmentP", "plusBtnInSide"]
+- !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "register"]
 - !private ["So18UITraitEnvironmentP", "registerClass"]
@@ -2595,6 +2644,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - !private ["So23UIUserActivityRestoringP", "UINib"]
 - ["So23UIUserActivityRestoringP", "UISearchBar"]
+- !private ["So23UIUserActivityRestoringP", "UIStoryboard"]
 - ["So23UIUserActivityRestoringP", "UITableView"]
 - ["So23UIUserActivityRestoringP", "UITableViewCell"]
 - !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
@@ -2650,6 +2700,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "performSegueWithIdentifier"]
 - ["So23UIUserActivityRestoringP", "plusBtnInContent"]
 - ["So23UIUserActivityRestoringP", "plusBtnInSide"]
+- !private ["So23UIUserActivityRestoringP", "present"]
+- !private ["So23UIUserActivityRestoringP", "presentViewController"]
 - !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "register"]
 - !private ["So23UIUserActivityRestoringP", "registerClass"]
@@ -2731,6 +2783,7 @@ depends-member:
 - ["So16UIViewControllerC", "UILabel"]
 - !private ["So16UIViewControllerC", "UINib"]
 - ["So16UIViewControllerC", "UISearchBar"]
+- !private ["So16UIViewControllerC", "UIStoryboard"]
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "UITableViewCell"]
 - !private ["So16UIViewControllerC", "UITapGestureRecognizer"]
@@ -2762,6 +2815,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "performSegue"]
 - ["So16UIViewControllerC", "plusBtnInContent"]
 - ["So16UIViewControllerC", "plusBtnInSide"]
+- !private ["So16UIViewControllerC", "present"]
 - !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIViewControllerC", "scrollViewDidEndDecelerating"]
@@ -2806,6 +2860,7 @@ depends-member:
 - ["12PDFPencilKit14ViewControllerC", "UILabel"]
 - !private ["12PDFPencilKit14ViewControllerC", "UINib"]
 - ["12PDFPencilKit14ViewControllerC", "UISearchBar"]
+- !private ["12PDFPencilKit14ViewControllerC", "UIStoryboard"]
 - ["12PDFPencilKit14ViewControllerC", "UITableView"]
 - ["12PDFPencilKit14ViewControllerC", "UITableViewCell"]
 - !private ["12PDFPencilKit14ViewControllerC", "UITapGestureRecognizer"]
@@ -2838,6 +2893,7 @@ depends-member:
 - !private ["12PDFPencilKit14ViewControllerC", "performSegue"]
 - ["12PDFPencilKit14ViewControllerC", "plusBtnInContent"]
 - ["12PDFPencilKit14ViewControllerC", "plusBtnInSide"]
+- !private ["12PDFPencilKit14ViewControllerC", "present"]
 - !private ["12PDFPencilKit14ViewControllerC", "print"]
 - ["12PDFPencilKit14ViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["12PDFPencilKit14ViewControllerC", "scrollViewDidEndDecelerating"]
@@ -2868,11 +2924,11 @@ depends-member:
 - ["12PDFPencilKit14ViewControllerC", "viewWillAppear"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "cgColor"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
@@ -2882,6 +2938,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIEdgeInsets"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UINib"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITapGestureRecognizer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -2920,6 +2977,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "indexTitles"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "indexTitlesForCollectionView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "instantiateViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isUserInteractionEnabled"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "itemSize"]
@@ -2935,6 +2993,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "plusBtnInContent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "plusBtnInSide"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "register"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
@@ -2973,6 +3032,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIEdgeInsets"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UINib"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStoryboard"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UITapGestureRecognizer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIView"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -3011,6 +3071,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "indexTitles"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "indexTitlesForCollectionView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "instantiateViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isHidden"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isUserInteractionEnabled"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "itemSize"]
@@ -3026,6 +3087,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "performSegue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "plusBtnInContent"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "plusBtnInSide"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "register"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "reloadData"]
@@ -3104,16 +3166,15 @@ depends-member:
 - !private ["12PDFPencilKit8sideCellC", "cellImage"]
 - !private ["12PDFPencilKit8sideCellC", "cellTitle"]
 depends-nominal:
-- !private "s18AdditiveArithmeticP"
 - !private "So22UIViewAnimationOptionsV"
-- "SK"
+- !private "SK"
 - !private "So7CALayerC"
 - !private "So15CALayerDelegateP"
 - !private "So13CAMediaTimingP"
 - !private "So6CGSizeV"
 - "s7CVarArgP"
-- "Sl"
-- "SL"
+- !private "Sl"
+- !private "SL"
 - !private "So17UIViewContentModeV"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -3124,17 +3185,16 @@ depends-nominal:
 - "SQ"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "SF"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
 - !private "10Foundation9IndexPathV"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "SM"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -3144,19 +3204,16 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
-- !private "Sj"
 - !private "s9OptionSetP"
 - !private "Sq"
 - !private "Sk"
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- "ST"
+- !private "ST"
 - !private "s10SetAlgebraP"
-- !private "s13SignedNumericP"
-- !private "Sx"
 - !private "s27StringInterpolationProtocolP"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
@@ -3181,7 +3238,7 @@ depends-nominal:
 - !private "So12UIEdgeInsetsV"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
-- "So20UIFocusItemContainerP"
+- !private "So20UIFocusItemContainerP"
 - !private "So30UIFocusItemScrollableContainerP"
 - "So19UIGestureRecognizerC"
 - !private "So27UIGestureRecognizerDelegateP"
@@ -3198,6 +3255,7 @@ depends-nominal:
 - "So20UIScrollViewDelegateP"
 - !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
+- !private "So12UIStoryboardC"
 - !private "So11UITableViewC"
 - "So15UITableViewCellC"
 - "So21UITableViewDataSourceP"
@@ -3210,11 +3268,11 @@ depends-nominal:
 - "12PDFPencilKit14ViewControllerC"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -3227,6 +3285,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3241,10 +3300,14 @@ depends-external:
 - "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/PencilKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
 - "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
@@ -3261,6 +3324,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/PencilKit.framework/Headers/PencilKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "1fba6db70087e6057698e66c89150771"

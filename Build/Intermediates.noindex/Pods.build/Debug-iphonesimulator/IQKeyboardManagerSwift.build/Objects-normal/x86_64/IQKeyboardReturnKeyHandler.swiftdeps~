@@ -10,13 +10,12 @@ provides-dynamic-lookup:
 - "addTextFieldView"
 - "delegate"
 - "goToNextResponderOrResign"
-- "kIQTextField"
-- "kIQTextFieldDelegate"
-- "kIQTextFieldReturnKeyType"
 - "lastTextFieldReturnKeyType"
+- "originalReturnKeyType"
 - "removeResponderFromView"
 - "removeTextFieldView"
 - "textField"
+- "textFieldDelegate"
 - "textFieldDidBeginEditing"
 - "textFieldDidEndEditing"
 - "textFieldInfoCache"
@@ -24,8 +23,10 @@ provides-dynamic-lookup:
 - "textFieldShouldClear"
 - "textFieldShouldEndEditing"
 - "textFieldShouldReturn"
+- "textFieldView"
 - "textFieldViewCachedInfo"
 - "textView"
+- "textViewDelegate"
 - "textViewDidBeginEditing"
 - "textViewDidChange"
 - "textViewDidChangeSelection"
@@ -40,7 +41,6 @@ depends-top-level:
 - !private "-"
 - !private "<"
 - "=="
-- "AnyHashable"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
@@ -48,17 +48,17 @@ depends-top-level:
 - !private "FloatLiteralType"
 - !private "IQKeyboardManager"
 - "IQKeyboardReturnKeyHandler"
+- "IQTextFieldViewInfoModal"
 - !private "IntegerLiteralType"
 - "NSObject"
 - "NSRange"
 - "NSTextAttachment"
 - "String"
-- "StringLiteralType"
+- !private "StringLiteralType"
 - "TernaryPrecedence"
 - "UIReturnKeyType"
 - "UITextField"
 - "UITextFieldDelegate"
-- "UITextFieldDidEndEditingReason"
 - "UITextItemInteraction"
 - "UITextView"
 - "UITextViewDelegate"
@@ -70,9 +70,6 @@ depends-top-level:
 - !private "addTextFieldView"
 - !private "delegate"
 - !private "goToNextResponderOrResign"
-- "kIQTextField"
-- !private "kIQTextFieldDelegate"
-- !private "kIQTextFieldReturnKeyType"
 - !private "lastTextFieldReturnKeyType"
 - !private "removeTextFieldView"
 - !private "textFieldInfoCache"
@@ -83,7 +80,7 @@ depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
-- !private ["Sa", "index"]
+- !private ["Sa", "firstIndex"]
 - ["Sa", "init"]
 - !private ["Sa", "last"]
 - !private ["Sa", "remove"]
@@ -94,7 +91,7 @@ depends-member:
 - ["SK", ""]
 - !private ["SK", "append"]
 - !private ["SK", "count"]
-- !private ["SK", "index"]
+- !private ["SK", "firstIndex"]
 - ["SK", "init"]
 - !private ["SK", "last"]
 - !private ["SK", "remove"]
@@ -102,19 +99,22 @@ depends-member:
 - !private ["SK", "sortedArrayByPosition"]
 - !private ["SK", "sortedArrayByTag"]
 - !private ["SK", "subscript"]
+- ["So15CALayerDelegateP", "DidEndEditingReason"]
 - !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "becomeFirstResponder"]
-- !private ["So15CALayerDelegateP", "deepResponderViews"]
+- ["So15CALayerDelegateP", "deepResponderViews"]
 - !private ["So15CALayerDelegateP", "delegate"]
 - !private ["So15CALayerDelegateP", "resignFirstResponder"]
 - !private ["So15CALayerDelegateP", "responderSiblings"]
 - !private ["So15CALayerDelegateP", "returnKeyType"]
 - !private ["So15CALayerDelegateP", "superviewOfClassType"]
-- ["s7CVarArgP", "AnyHashable"]
+- ["s7CVarArgP", "DidEndEditingReason"]
 - !private ["s7CVarArgP", "IQKeyboardManager"]
+- ["s7CVarArgP", "IQTextFieldViewInfoModal"]
 - ["s7CVarArgP", "UIReturnKeyType"]
 - !private ["s7CVarArgP", "UITextFieldDelegate"]
 - !private ["s7CVarArgP", "UITextViewDelegate"]
+- !private ["s7CVarArgP", "UIView"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addResponderFromView"]
 - !private ["s7CVarArgP", "addTextFieldView"]
@@ -123,14 +123,12 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "deepResponderViews"]
 - !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "firstIndex"]
 - !private ["s7CVarArgP", "goToNextResponderOrResign"]
-- !private ["s7CVarArgP", "index"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "kIQTextField"]
-- !private ["s7CVarArgP", "kIQTextFieldDelegate"]
-- !private ["s7CVarArgP", "kIQTextFieldReturnKeyType"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "lastTextFieldReturnKeyType"]
+- !private ["s7CVarArgP", "originalReturnKeyType"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "removeAll"]
 - !private ["s7CVarArgP", "removeResponderFromView"]
@@ -151,12 +149,13 @@ depends-member:
 - ["s7CVarArgP", "scrollViewWillBeginDragging"]
 - ["s7CVarArgP", "scrollViewWillBeginZooming"]
 - ["s7CVarArgP", "scrollViewWillEndDragging"]
-- !private ["s7CVarArgP", "sharedManager"]
+- !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "sortedArrayByPosition"]
 - !private ["s7CVarArgP", "sortedArrayByTag"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "superviewOfClassType"]
 - ["s7CVarArgP", "textField"]
+- !private ["s7CVarArgP", "textFieldDelegate"]
 - ["s7CVarArgP", "textFieldDidBeginEditing"]
 - ["s7CVarArgP", "textFieldDidChangeSelection"]
 - ["s7CVarArgP", "textFieldDidEndEditing"]
@@ -165,8 +164,10 @@ depends-member:
 - ["s7CVarArgP", "textFieldShouldClear"]
 - ["s7CVarArgP", "textFieldShouldEndEditing"]
 - ["s7CVarArgP", "textFieldShouldReturn"]
+- !private ["s7CVarArgP", "textFieldView"]
 - !private ["s7CVarArgP", "textFieldViewCachedInfo"]
 - ["s7CVarArgP", "textView"]
+- !private ["s7CVarArgP", "textViewDelegate"]
 - ["s7CVarArgP", "textViewDidBeginEditing"]
 - ["s7CVarArgP", "textViewDidChange"]
 - ["s7CVarArgP", "textViewDidChangeSelection"]
@@ -182,7 +183,7 @@ depends-member:
 - ["Sl", ""]
 - !private ["Sl", "append"]
 - !private ["Sl", "count"]
-- !private ["Sl", "index"]
+- !private ["Sl", "firstIndex"]
 - ["Sl", "init"]
 - !private ["Sl", "last"]
 - !private ["Sl", "remove"]
@@ -190,10 +191,10 @@ depends-member:
 - !private ["Sl", "sortedArrayByPosition"]
 - !private ["Sl", "sortedArrayByTag"]
 - !private ["Sl", "subscript"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
-- !private ["10Foundation15ContiguousBytesP", "index"]
+- !private ["10Foundation15ContiguousBytesP", "firstIndex"]
 - ["10Foundation15ContiguousBytesP", "init"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
 - !private ["10Foundation15ContiguousBytesP", "remove"]
@@ -201,11 +202,13 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "sortedArrayByPosition"]
 - !private ["10Foundation15ContiguousBytesP", "sortedArrayByTag"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
-- ["s28CustomDebugStringConvertibleP", "AnyHashable"]
+- ["s28CustomDebugStringConvertibleP", "DidEndEditingReason"]
 - !private ["s28CustomDebugStringConvertibleP", "IQKeyboardManager"]
+- ["s28CustomDebugStringConvertibleP", "IQTextFieldViewInfoModal"]
 - ["s28CustomDebugStringConvertibleP", "UIReturnKeyType"]
 - !private ["s28CustomDebugStringConvertibleP", "UITextFieldDelegate"]
 - !private ["s28CustomDebugStringConvertibleP", "UITextViewDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "UIView"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addResponderFromView"]
 - !private ["s28CustomDebugStringConvertibleP", "addTextFieldView"]
@@ -214,14 +217,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "deepResponderViews"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "firstIndex"]
 - !private ["s28CustomDebugStringConvertibleP", "goToNextResponderOrResign"]
-- !private ["s28CustomDebugStringConvertibleP", "index"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "kIQTextField"]
-- !private ["s28CustomDebugStringConvertibleP", "kIQTextFieldDelegate"]
-- !private ["s28CustomDebugStringConvertibleP", "kIQTextFieldReturnKeyType"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
 - !private ["s28CustomDebugStringConvertibleP", "lastTextFieldReturnKeyType"]
+- !private ["s28CustomDebugStringConvertibleP", "originalReturnKeyType"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAll"]
 - !private ["s28CustomDebugStringConvertibleP", "removeResponderFromView"]
@@ -242,12 +243,13 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "scrollViewWillBeginDragging"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewWillBeginZooming"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewWillEndDragging"]
-- !private ["s28CustomDebugStringConvertibleP", "sharedManager"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "sortedArrayByPosition"]
 - !private ["s28CustomDebugStringConvertibleP", "sortedArrayByTag"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "superviewOfClassType"]
 - ["s28CustomDebugStringConvertibleP", "textField"]
+- !private ["s28CustomDebugStringConvertibleP", "textFieldDelegate"]
 - ["s28CustomDebugStringConvertibleP", "textFieldDidBeginEditing"]
 - ["s28CustomDebugStringConvertibleP", "textFieldDidChangeSelection"]
 - ["s28CustomDebugStringConvertibleP", "textFieldDidEndEditing"]
@@ -256,8 +258,10 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldClear"]
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldEndEditing"]
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldReturn"]
+- !private ["s28CustomDebugStringConvertibleP", "textFieldView"]
 - !private ["s28CustomDebugStringConvertibleP", "textFieldViewCachedInfo"]
 - ["s28CustomDebugStringConvertibleP", "textView"]
+- !private ["s28CustomDebugStringConvertibleP", "textViewDelegate"]
 - ["s28CustomDebugStringConvertibleP", "textViewDidBeginEditing"]
 - ["s28CustomDebugStringConvertibleP", "textViewDidChange"]
 - ["s28CustomDebugStringConvertibleP", "textViewDidChangeSelection"]
@@ -272,7 +276,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "count"]
-- !private ["s17CustomReflectableP", "index"]
+- !private ["s17CustomReflectableP", "firstIndex"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "remove"]
@@ -280,11 +284,13 @@ depends-member:
 - !private ["s17CustomReflectableP", "sortedArrayByPosition"]
 - !private ["s17CustomReflectableP", "sortedArrayByTag"]
 - !private ["s17CustomReflectableP", "subscript"]
-- ["s23CustomStringConvertibleP", "AnyHashable"]
+- ["s23CustomStringConvertibleP", "DidEndEditingReason"]
 - !private ["s23CustomStringConvertibleP", "IQKeyboardManager"]
+- ["s23CustomStringConvertibleP", "IQTextFieldViewInfoModal"]
 - ["s23CustomStringConvertibleP", "UIReturnKeyType"]
 - !private ["s23CustomStringConvertibleP", "UITextFieldDelegate"]
 - !private ["s23CustomStringConvertibleP", "UITextViewDelegate"]
+- !private ["s23CustomStringConvertibleP", "UIView"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addResponderFromView"]
 - !private ["s23CustomStringConvertibleP", "addTextFieldView"]
@@ -293,14 +299,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "deepResponderViews"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "firstIndex"]
 - !private ["s23CustomStringConvertibleP", "goToNextResponderOrResign"]
-- !private ["s23CustomStringConvertibleP", "index"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "kIQTextField"]
-- !private ["s23CustomStringConvertibleP", "kIQTextFieldDelegate"]
-- !private ["s23CustomStringConvertibleP", "kIQTextFieldReturnKeyType"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "lastTextFieldReturnKeyType"]
+- !private ["s23CustomStringConvertibleP", "originalReturnKeyType"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "removeAll"]
 - !private ["s23CustomStringConvertibleP", "removeResponderFromView"]
@@ -321,12 +325,13 @@ depends-member:
 - ["s23CustomStringConvertibleP", "scrollViewWillBeginDragging"]
 - ["s23CustomStringConvertibleP", "scrollViewWillBeginZooming"]
 - ["s23CustomStringConvertibleP", "scrollViewWillEndDragging"]
-- !private ["s23CustomStringConvertibleP", "sharedManager"]
+- !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "sortedArrayByPosition"]
 - !private ["s23CustomStringConvertibleP", "sortedArrayByTag"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "superviewOfClassType"]
 - ["s23CustomStringConvertibleP", "textField"]
+- !private ["s23CustomStringConvertibleP", "textFieldDelegate"]
 - ["s23CustomStringConvertibleP", "textFieldDidBeginEditing"]
 - ["s23CustomStringConvertibleP", "textFieldDidChangeSelection"]
 - ["s23CustomStringConvertibleP", "textFieldDidEndEditing"]
@@ -335,8 +340,10 @@ depends-member:
 - ["s23CustomStringConvertibleP", "textFieldShouldClear"]
 - ["s23CustomStringConvertibleP", "textFieldShouldEndEditing"]
 - ["s23CustomStringConvertibleP", "textFieldShouldReturn"]
+- !private ["s23CustomStringConvertibleP", "textFieldView"]
 - !private ["s23CustomStringConvertibleP", "textFieldViewCachedInfo"]
 - ["s23CustomStringConvertibleP", "textView"]
+- !private ["s23CustomStringConvertibleP", "textViewDelegate"]
 - ["s23CustomStringConvertibleP", "textViewDidBeginEditing"]
 - ["s23CustomStringConvertibleP", "textViewDidChange"]
 - ["s23CustomStringConvertibleP", "textViewDidChangeSelection"]
@@ -352,7 +359,7 @@ depends-member:
 - ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "count"]
-- !private ["10Foundation12DataProtocolP", "index"]
+- !private ["10Foundation12DataProtocolP", "firstIndex"]
 - ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation12DataProtocolP", "remove"]
@@ -362,7 +369,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "subscript"]
 - !private ["Se", "append"]
 - !private ["Se", "count"]
-- !private ["Se", "index"]
+- !private ["Se", "firstIndex"]
 - ["Se", "init"]
 - !private ["Se", "last"]
 - !private ["Se", "remove"]
@@ -370,11 +377,9 @@ depends-member:
 - !private ["Se", "sortedArrayByPosition"]
 - !private ["Se", "sortedArrayByTag"]
 - !private ["Se", "subscript"]
-- !private ["SD", "init"]
-- !private ["SD", "subscript"]
 - !private ["SE", "append"]
 - !private ["SE", "count"]
-- !private ["SE", "index"]
+- !private ["SE", "firstIndex"]
 - ["SE", "init"]
 - !private ["SE", "last"]
 - !private ["SE", "remove"]
@@ -382,11 +387,13 @@ depends-member:
 - !private ["SE", "sortedArrayByPosition"]
 - !private ["SE", "sortedArrayByTag"]
 - !private ["SE", "subscript"]
-- ["SQ", "AnyHashable"]
+- ["SQ", "DidEndEditingReason"]
 - !private ["SQ", "IQKeyboardManager"]
+- ["SQ", "IQTextFieldViewInfoModal"]
 - ["SQ", "UIReturnKeyType"]
 - !private ["SQ", "UITextFieldDelegate"]
 - !private ["SQ", "UITextViewDelegate"]
+- !private ["SQ", "UIView"]
 - ["SQ", ""]
 - !private ["SQ", "addResponderFromView"]
 - !private ["SQ", "addTextFieldView"]
@@ -398,15 +405,13 @@ depends-member:
 - !private ["SQ", "deepResponderViews"]
 - ["SQ", "default"]
 - !private ["SQ", "delegate"]
+- !private ["SQ", "firstIndex"]
 - !private ["SQ", "goToNextResponderOrResign"]
-- !private ["SQ", "index"]
 - ["SQ", "init"]
-- !private ["SQ", "kIQTextField"]
-- !private ["SQ", "kIQTextFieldDelegate"]
-- !private ["SQ", "kIQTextFieldReturnKeyType"]
 - !private ["SQ", "last"]
 - !private ["SQ", "lastTextFieldReturnKeyType"]
 - !private ["SQ", "next"]
+- !private ["SQ", "originalReturnKeyType"]
 - !private ["SQ", "remove"]
 - !private ["SQ", "removeAll"]
 - !private ["SQ", "removeResponderFromView"]
@@ -427,12 +432,13 @@ depends-member:
 - ["SQ", "scrollViewWillBeginDragging"]
 - ["SQ", "scrollViewWillBeginZooming"]
 - ["SQ", "scrollViewWillEndDragging"]
-- !private ["SQ", "sharedManager"]
+- !private ["SQ", "shared"]
 - !private ["SQ", "sortedArrayByPosition"]
 - !private ["SQ", "sortedArrayByTag"]
 - !private ["SQ", "subscript"]
 - !private ["SQ", "superviewOfClassType"]
 - ["SQ", "textField"]
+- !private ["SQ", "textFieldDelegate"]
 - ["SQ", "textFieldDidBeginEditing"]
 - ["SQ", "textFieldDidChangeSelection"]
 - ["SQ", "textFieldDidEndEditing"]
@@ -441,8 +447,10 @@ depends-member:
 - ["SQ", "textFieldShouldClear"]
 - ["SQ", "textFieldShouldEndEditing"]
 - ["SQ", "textFieldShouldReturn"]
+- !private ["SQ", "textFieldView"]
 - !private ["SQ", "textFieldViewCachedInfo"]
 - ["SQ", "textView"]
+- !private ["SQ", "textViewDelegate"]
 - ["SQ", "textViewDidBeginEditing"]
 - ["SQ", "textViewDidChange"]
 - ["SQ", "textViewDidChangeSelection"]
@@ -458,7 +466,7 @@ depends-member:
 - ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
-- !private ["s25ExpressibleByArrayLiteralP", "index"]
+- !private ["s25ExpressibleByArrayLiteralP", "firstIndex"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
 - !private ["s25ExpressibleByArrayLiteralP", "remove"]
@@ -466,21 +474,21 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "sortedArrayByPosition"]
 - !private ["s25ExpressibleByArrayLiteralP", "sortedArrayByTag"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
-- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s23ExpressibleByNilLiteralP", "init"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
-- ["SH", "AnyHashable"]
+- ["SH", "DidEndEditingReason"]
 - !private ["SH", "IQKeyboardManager"]
+- ["SH", "IQTextFieldViewInfoModal"]
 - ["SH", "UIReturnKeyType"]
 - !private ["SH", "UITextFieldDelegate"]
 - !private ["SH", "UITextViewDelegate"]
+- !private ["SH", "UIView"]
 - ["SH", ""]
 - !private ["SH", "addResponderFromView"]
 - !private ["SH", "addTextFieldView"]
@@ -492,15 +500,13 @@ depends-member:
 - !private ["SH", "deepResponderViews"]
 - ["SH", "default"]
 - !private ["SH", "delegate"]
+- !private ["SH", "firstIndex"]
 - !private ["SH", "goToNextResponderOrResign"]
-- !private ["SH", "index"]
 - ["SH", "init"]
-- !private ["SH", "kIQTextField"]
-- !private ["SH", "kIQTextFieldDelegate"]
-- !private ["SH", "kIQTextFieldReturnKeyType"]
 - !private ["SH", "last"]
 - !private ["SH", "lastTextFieldReturnKeyType"]
 - !private ["SH", "next"]
+- !private ["SH", "originalReturnKeyType"]
 - !private ["SH", "remove"]
 - !private ["SH", "removeAll"]
 - !private ["SH", "removeResponderFromView"]
@@ -521,12 +527,13 @@ depends-member:
 - ["SH", "scrollViewWillBeginDragging"]
 - ["SH", "scrollViewWillBeginZooming"]
 - ["SH", "scrollViewWillEndDragging"]
-- !private ["SH", "sharedManager"]
+- !private ["SH", "shared"]
 - !private ["SH", "sortedArrayByPosition"]
 - !private ["SH", "sortedArrayByTag"]
 - !private ["SH", "subscript"]
 - !private ["SH", "superviewOfClassType"]
 - ["SH", "textField"]
+- !private ["SH", "textFieldDelegate"]
 - ["SH", "textFieldDidBeginEditing"]
 - ["SH", "textFieldDidChangeSelection"]
 - ["SH", "textFieldDidEndEditing"]
@@ -535,8 +542,10 @@ depends-member:
 - ["SH", "textFieldShouldClear"]
 - ["SH", "textFieldShouldEndEditing"]
 - ["SH", "textFieldShouldReturn"]
+- !private ["SH", "textFieldView"]
 - !private ["SH", "textFieldViewCachedInfo"]
 - ["SH", "textView"]
+- !private ["SH", "textViewDelegate"]
 - ["SH", "textViewDidBeginEditing"]
 - ["SH", "textViewDidChange"]
 - ["SH", "textViewDidChangeSelection"]
@@ -551,19 +560,18 @@ depends-member:
 - ["SH", "viewForZoomingInScrollView"]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "byPosition"]
 - ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "byTag"]
-- !private ["22IQKeyboardManagerSwift0aB0C", "sharedManager"]
+- !private ["22IQKeyboardManagerSwift0aB0C", "shared"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "toolbarManageBehaviour"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "toolbarPreviousNextAllowedClasses"]
-- ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "AnyHashable"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "Bool"]
 - !private ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "IQKeyboardManager"]
+- ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "IQTextFieldViewInfoModal"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "NSRange"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "NSTextAttachment"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "String"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UIReturnKeyType"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UITextField"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UITextFieldDelegate"]
-- ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UITextFieldDidEndEditingReason"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UITextItemInteraction"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UITextView"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "UITextViewDelegate"]
@@ -577,9 +585,6 @@ depends-member:
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "delegate"]
 - !private ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "goToNextResponderOrResign"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "init"]
-- !private ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "kIQTextField"]
-- !private ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "kIQTextFieldDelegate"]
-- !private ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "kIQTextFieldReturnKeyType"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "lastTextFieldReturnKeyType"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "removeResponderFromView"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "removeTextFieldView"]
@@ -616,11 +621,11 @@ depends-member:
 - !private ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "updateReturnKeyTypeOnTextField"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "viewForZooming"]
 - ["22IQKeyboardManagerSwift0A16ReturnKeyHandlerC", "viewForZoomingInScrollView"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - ["SM", ""]
 - !private ["SM", "append"]
 - !private ["SM", "count"]
-- !private ["SM", "index"]
+- !private ["SM", "firstIndex"]
 - ["SM", "init"]
 - !private ["SM", "last"]
 - !private ["SM", "remove"]
@@ -630,7 +635,7 @@ depends-member:
 - !private ["SM", "subscript"]
 - !private ["10Foundation19MutableDataProtocolP", "append"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
-- !private ["10Foundation19MutableDataProtocolP", "index"]
+- !private ["10Foundation19MutableDataProtocolP", "firstIndex"]
 - ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "remove"]
@@ -638,9 +643,10 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "sortedArrayByPosition"]
 - !private ["10Foundation19MutableDataProtocolP", "sortedArrayByTag"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["So8NSCodingP", "DidEndEditingReason"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "becomeFirstResponder"]
-- !private ["So8NSCodingP", "deepResponderViews"]
+- ["So8NSCodingP", "deepResponderViews"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "resignFirstResponder"]
 - !private ["So8NSCodingP", "responderSiblings"]
@@ -648,16 +654,16 @@ depends-member:
 - !private ["So8NSCodingP", "superviewOfClassType"]
 - !private ["So8NSCodingP", "view"]
 - !private ["So26NSExtensionRequestHandlingP", "view"]
-- ["So8NSObjectC", "AnyHashable"]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "DidEndEditingReason"]
 - !private ["So8NSObjectC", "IQKeyboardManager"]
+- ["So8NSObjectC", "IQTextFieldViewInfoModal"]
 - ["So8NSObjectC", "NSRange"]
 - ["So8NSObjectC", "NSTextAttachment"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIReturnKeyType"]
 - ["So8NSObjectC", "UITextField"]
 - ["So8NSObjectC", "UITextFieldDelegate"]
-- ["So8NSObjectC", "UITextFieldDidEndEditingReason"]
 - ["So8NSObjectC", "UITextItemInteraction"]
 - ["So8NSObjectC", "UITextView"]
 - ["So8NSObjectC", "UITextViewDelegate"]
@@ -672,10 +678,8 @@ depends-member:
 - ["So8NSObjectC", "delegate"]
 - ["So8NSObjectC", "goToNextResponderOrResign"]
 - ["So8NSObjectC", "init"]
-- ["So8NSObjectC", "kIQTextField"]
-- ["So8NSObjectC", "kIQTextFieldDelegate"]
-- ["So8NSObjectC", "kIQTextFieldReturnKeyType"]
 - ["So8NSObjectC", "lastTextFieldReturnKeyType"]
+- ["So8NSObjectC", "originalReturnKeyType"]
 - ["So8NSObjectC", "removeResponderFromView"]
 - ["So8NSObjectC", "removeTextFieldView"]
 - !private ["So8NSObjectC", "resignFirstResponder"]
@@ -694,9 +698,10 @@ depends-member:
 - ["So8NSObjectC", "scrollViewWillBeginDragging"]
 - ["So8NSObjectC", "scrollViewWillBeginZooming"]
 - ["So8NSObjectC", "scrollViewWillEndDragging"]
-- !private ["So8NSObjectC", "sharedManager"]
+- !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "superviewOfClassType"]
 - ["So8NSObjectC", "textField"]
+- ["So8NSObjectC", "textFieldDelegate"]
 - ["So8NSObjectC", "textFieldDidBeginEditing"]
 - ["So8NSObjectC", "textFieldDidChangeSelection"]
 - ["So8NSObjectC", "textFieldDidEndEditing"]
@@ -705,8 +710,10 @@ depends-member:
 - ["So8NSObjectC", "textFieldShouldClear"]
 - ["So8NSObjectC", "textFieldShouldEndEditing"]
 - ["So8NSObjectC", "textFieldShouldReturn"]
+- ["So8NSObjectC", "textFieldView"]
 - ["So8NSObjectC", "textFieldViewCachedInfo"]
 - ["So8NSObjectC", "textView"]
+- ["So8NSObjectC", "textViewDelegate"]
 - ["So8NSObjectC", "textViewDidBeginEditing"]
 - ["So8NSObjectC", "textViewDidChange"]
 - ["So8NSObjectC", "textViewDidChangeSelection"]
@@ -719,16 +726,16 @@ depends-member:
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
-- ["So8NSObjectP", "AnyHashable"]
 - ["So8NSObjectP", "Bool"]
+- ["So8NSObjectP", "DidEndEditingReason"]
 - !private ["So8NSObjectP", "IQKeyboardManager"]
+- ["So8NSObjectP", "IQTextFieldViewInfoModal"]
 - ["So8NSObjectP", "NSRange"]
 - ["So8NSObjectP", "NSTextAttachment"]
 - ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UIReturnKeyType"]
 - ["So8NSObjectP", "UITextField"]
 - ["So8NSObjectP", "UITextFieldDelegate"]
-- ["So8NSObjectP", "UITextFieldDidEndEditingReason"]
 - ["So8NSObjectP", "UITextItemInteraction"]
 - ["So8NSObjectP", "UITextView"]
 - ["So8NSObjectP", "UITextViewDelegate"]
@@ -739,15 +746,13 @@ depends-member:
 - ["So8NSObjectP", "addResponderFromView"]
 - ["So8NSObjectP", "addTextFieldView"]
 - !private ["So8NSObjectP", "becomeFirstResponder"]
-- !private ["So8NSObjectP", "deepResponderViews"]
+- ["So8NSObjectP", "deepResponderViews"]
 - ["So8NSObjectP", "deinit"]
 - ["So8NSObjectP", "delegate"]
 - ["So8NSObjectP", "goToNextResponderOrResign"]
 - ["So8NSObjectP", "init"]
-- ["So8NSObjectP", "kIQTextField"]
-- ["So8NSObjectP", "kIQTextFieldDelegate"]
-- ["So8NSObjectP", "kIQTextFieldReturnKeyType"]
 - ["So8NSObjectP", "lastTextFieldReturnKeyType"]
+- ["So8NSObjectP", "originalReturnKeyType"]
 - ["So8NSObjectP", "removeResponderFromView"]
 - ["So8NSObjectP", "removeTextFieldView"]
 - !private ["So8NSObjectP", "resignFirstResponder"]
@@ -767,9 +772,10 @@ depends-member:
 - ["So8NSObjectP", "scrollViewWillBeginDragging"]
 - ["So8NSObjectP", "scrollViewWillBeginZooming"]
 - ["So8NSObjectP", "scrollViewWillEndDragging"]
-- !private ["So8NSObjectP", "sharedManager"]
+- !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "superviewOfClassType"]
 - ["So8NSObjectP", "textField"]
+- ["So8NSObjectP", "textFieldDelegate"]
 - ["So8NSObjectP", "textFieldDidBeginEditing"]
 - ["So8NSObjectP", "textFieldDidChangeSelection"]
 - ["So8NSObjectP", "textFieldDidEndEditing"]
@@ -778,8 +784,10 @@ depends-member:
 - ["So8NSObjectP", "textFieldShouldClear"]
 - ["So8NSObjectP", "textFieldShouldEndEditing"]
 - ["So8NSObjectP", "textFieldShouldReturn"]
+- ["So8NSObjectP", "textFieldView"]
 - ["So8NSObjectP", "textFieldViewCachedInfo"]
 - ["So8NSObjectP", "textView"]
+- ["So8NSObjectP", "textViewDelegate"]
 - ["So8NSObjectP", "textViewDidBeginEditing"]
 - ["So8NSObjectP", "textViewDidChange"]
 - ["So8NSObjectP", "textViewDidChangeSelection"]
@@ -796,7 +804,7 @@ depends-member:
 - ["Sk", ""]
 - !private ["Sk", "append"]
 - !private ["Sk", "count"]
-- !private ["Sk", "index"]
+- !private ["Sk", "firstIndex"]
 - ["Sk", "init"]
 - !private ["Sk", "last"]
 - !private ["Sk", "remove"]
@@ -807,7 +815,7 @@ depends-member:
 - ["Sm", ""]
 - !private ["Sm", "append"]
 - !private ["Sm", "count"]
-- !private ["Sm", "index"]
+- !private ["Sm", "firstIndex"]
 - ["Sm", "init"]
 - !private ["Sm", "last"]
 - !private ["Sm", "remove"]
@@ -824,7 +832,7 @@ depends-member:
 - ["ST", ""]
 - !private ["ST", "append"]
 - !private ["ST", "count"]
-- !private ["ST", "index"]
+- !private ["ST", "firstIndex"]
 - ["ST", "init"]
 - !private ["ST", "last"]
 - !private ["ST", "makeIterator"]
@@ -835,27 +843,30 @@ depends-member:
 - !private ["ST", "subscript"]
 - !private ["s13SignedNumericP", ""]
 - !private ["Sx", ""]
-- !private ["s16TextOutputStreamP", ""]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
+- ["So29UIAccessibilityIdentificationP", "DidEndEditingReason"]
 - !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "becomeFirstResponder"]
-- !private ["So29UIAccessibilityIdentificationP", "deepResponderViews"]
+- ["So29UIAccessibilityIdentificationP", "deepResponderViews"]
 - !private ["So29UIAccessibilityIdentificationP", "delegate"]
 - !private ["So29UIAccessibilityIdentificationP", "resignFirstResponder"]
 - !private ["So29UIAccessibilityIdentificationP", "responderSiblings"]
 - !private ["So29UIAccessibilityIdentificationP", "returnKeyType"]
 - !private ["So29UIAccessibilityIdentificationP", "superviewOfClassType"]
+- ["So12UIAppearanceP", "DidEndEditingReason"]
 - !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "becomeFirstResponder"]
-- !private ["So12UIAppearanceP", "deepResponderViews"]
+- ["So12UIAppearanceP", "deepResponderViews"]
 - !private ["So12UIAppearanceP", "delegate"]
 - !private ["So12UIAppearanceP", "resignFirstResponder"]
 - !private ["So12UIAppearanceP", "responderSiblings"]
 - !private ["So12UIAppearanceP", "returnKeyType"]
 - !private ["So12UIAppearanceP", "superviewOfClassType"]
+- ["So21UIAppearanceContainerP", "DidEndEditingReason"]
 - !private ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "becomeFirstResponder"]
-- !private ["So21UIAppearanceContainerP", "deepResponderViews"]
+- ["So21UIAppearanceContainerP", "deepResponderViews"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "resignFirstResponder"]
 - !private ["So21UIAppearanceContainerP", "responderSiblings"]
@@ -863,50 +874,58 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "superviewOfClassType"]
 - !private ["So21UIAppearanceContainerP", "view"]
 - !private ["So18UIContentContainerP", "view"]
+- ["So30UIContentSizeCategoryAdjustingP", "DidEndEditingReason"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "delegate"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "returnKeyType"]
+- ["So32UIContextMenuInteractionDelegateP", "DidEndEditingReason"]
 - !private ["So32UIContextMenuInteractionDelegateP", ""]
 - !private ["So32UIContextMenuInteractionDelegateP", "delegate"]
 - !private ["So32UIContextMenuInteractionDelegateP", "returnKeyType"]
+- ["So9UIControlC", "DidEndEditingReason"]
 - ["So9UIControlC", ""]
 - !private ["So9UIControlC", "delegate"]
 - !private ["So9UIControlC", "returnKeyType"]
+- ["So17UICoordinateSpaceP", "DidEndEditingReason"]
 - !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "becomeFirstResponder"]
-- !private ["So17UICoordinateSpaceP", "deepResponderViews"]
+- ["So17UICoordinateSpaceP", "deepResponderViews"]
 - !private ["So17UICoordinateSpaceP", "delegate"]
 - !private ["So17UICoordinateSpaceP", "resignFirstResponder"]
 - !private ["So17UICoordinateSpaceP", "responderSiblings"]
 - !private ["So17UICoordinateSpaceP", "returnKeyType"]
 - !private ["So17UICoordinateSpaceP", "superviewOfClassType"]
+- ["So13UIDynamicItemP", "DidEndEditingReason"]
 - !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "becomeFirstResponder"]
-- !private ["So13UIDynamicItemP", "deepResponderViews"]
+- ["So13UIDynamicItemP", "deepResponderViews"]
 - !private ["So13UIDynamicItemP", "delegate"]
 - !private ["So13UIDynamicItemP", "resignFirstResponder"]
 - !private ["So13UIDynamicItemP", "responderSiblings"]
 - !private ["So13UIDynamicItemP", "returnKeyType"]
 - !private ["So13UIDynamicItemP", "superviewOfClassType"]
-- !private ["So18UIFocusEnvironmentP", ""]
+- ["So18UIFocusEnvironmentP", "DidEndEditingReason"]
+- ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "becomeFirstResponder"]
-- !private ["So18UIFocusEnvironmentP", "deepResponderViews"]
+- ["So18UIFocusEnvironmentP", "deepResponderViews"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "resignFirstResponder"]
 - !private ["So18UIFocusEnvironmentP", "responderSiblings"]
 - !private ["So18UIFocusEnvironmentP", "returnKeyType"]
 - !private ["So18UIFocusEnvironmentP", "superviewOfClassType"]
 - !private ["So18UIFocusEnvironmentP", "view"]
+- ["So11UIFocusItemP", "DidEndEditingReason"]
 - !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "becomeFirstResponder"]
-- !private ["So11UIFocusItemP", "deepResponderViews"]
+- ["So11UIFocusItemP", "deepResponderViews"]
 - !private ["So11UIFocusItemP", "delegate"]
 - !private ["So11UIFocusItemP", "resignFirstResponder"]
 - !private ["So11UIFocusItemP", "responderSiblings"]
 - !private ["So11UIFocusItemP", "returnKeyType"]
 - !private ["So11UIFocusItemP", "superviewOfClassType"]
+- ["So20UIFocusItemContainerP", "DidEndEditingReason"]
 - !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "becomeFirstResponder"]
-- !private ["So20UIFocusItemContainerP", "deepResponderViews"]
+- ["So20UIFocusItemContainerP", "deepResponderViews"]
 - !private ["So20UIFocusItemContainerP", "delegate"]
 - !private ["So20UIFocusItemContainerP", "resignFirstResponder"]
 - !private ["So20UIFocusItemContainerP", "responderSiblings"]
@@ -915,29 +934,33 @@ depends-member:
 - !private ["So30UIFocusItemScrollableContainerP", ""]
 - !private ["So30UIFocusItemScrollableContainerP", "delegate"]
 - !private ["So30UIFocusItemScrollableContainerP", "returnKeyType"]
-- !private ["So27UIGestureRecognizerDelegateP", "sharedManager"]
+- !private ["So27UIGestureRecognizerDelegateP", "shared"]
 - !private ["So27UIGestureRecognizerDelegateP", "toolbarManageBehaviour"]
 - !private ["So27UIGestureRecognizerDelegateP", "toolbarPreviousNextAllowedClasses"]
+- ["So10UIKeyInputP", "DidEndEditingReason"]
 - ["So10UIKeyInputP", ""]
 - !private ["So10UIKeyInputP", "delegate"]
 - !private ["So10UIKeyInputP", "returnKeyType"]
+- ["So24UILargeContentViewerItemP", "DidEndEditingReason"]
 - !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "becomeFirstResponder"]
-- !private ["So24UILargeContentViewerItemP", "deepResponderViews"]
+- ["So24UILargeContentViewerItemP", "deepResponderViews"]
 - !private ["So24UILargeContentViewerItemP", "delegate"]
 - !private ["So24UILargeContentViewerItemP", "resignFirstResponder"]
 - !private ["So24UILargeContentViewerItemP", "responderSiblings"]
 - !private ["So24UILargeContentViewerItemP", "returnKeyType"]
 - !private ["So24UILargeContentViewerItemP", "superviewOfClassType"]
-- !private ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "DidEndEditingReason"]
+- ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "becomeFirstResponder"]
-- !private ["So30UIPasteConfigurationSupportingP", "deepResponderViews"]
+- ["So30UIPasteConfigurationSupportingP", "deepResponderViews"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "resignFirstResponder"]
 - !private ["So30UIPasteConfigurationSupportingP", "responderSiblings"]
 - !private ["So30UIPasteConfigurationSupportingP", "returnKeyType"]
 - !private ["So30UIPasteConfigurationSupportingP", "superviewOfClassType"]
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
+- ["So11UIResponderC", "DidEndEditingReason"]
 - ["So11UIResponderC", ""]
 - !private ["So11UIResponderC", "becomeFirstResponder"]
 - !private ["So11UIResponderC", "deepResponderViews"]
@@ -947,9 +970,10 @@ depends-member:
 - !private ["So11UIResponderC", "returnKeyType"]
 - !private ["So11UIResponderC", "superviewOfClassType"]
 - !private ["So11UIResponderC", "view"]
+- ["So30UIResponderStandardEditActionsP", "DidEndEditingReason"]
 - !private ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "becomeFirstResponder"]
-- !private ["So30UIResponderStandardEditActionsP", "deepResponderViews"]
+- ["So30UIResponderStandardEditActionsP", "deepResponderViews"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "resignFirstResponder"]
 - !private ["So30UIResponderStandardEditActionsP", "responderSiblings"]
@@ -961,11 +985,12 @@ depends-member:
 - ["So12UIScrollViewC", ""]
 - !private ["So12UIScrollViewC", "delegate"]
 - !private ["So12UIScrollViewC", "returnKeyType"]
-- ["So20UIScrollViewDelegateP", "AnyHashable"]
 - !private ["So20UIScrollViewDelegateP", "IQKeyboardManager"]
+- ["So20UIScrollViewDelegateP", "IQTextFieldViewInfoModal"]
 - ["So20UIScrollViewDelegateP", "UIReturnKeyType"]
 - !private ["So20UIScrollViewDelegateP", "UITextFieldDelegate"]
 - !private ["So20UIScrollViewDelegateP", "UITextViewDelegate"]
+- !private ["So20UIScrollViewDelegateP", "UIView"]
 - ["So20UIScrollViewDelegateP", ""]
 - ["So20UIScrollViewDelegateP", "addResponderFromView"]
 - ["So20UIScrollViewDelegateP", "addTextFieldView"]
@@ -973,9 +998,6 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "delegate"]
 - ["So20UIScrollViewDelegateP", "goToNextResponderOrResign"]
 - ["So20UIScrollViewDelegateP", "init"]
-- ["So20UIScrollViewDelegateP", "kIQTextField"]
-- ["So20UIScrollViewDelegateP", "kIQTextFieldDelegate"]
-- ["So20UIScrollViewDelegateP", "kIQTextFieldReturnKeyType"]
 - ["So20UIScrollViewDelegateP", "lastTextFieldReturnKeyType"]
 - ["So20UIScrollViewDelegateP", "removeResponderFromView"]
 - ["So20UIScrollViewDelegateP", "removeTextFieldView"]
@@ -1014,17 +1036,21 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "viewForZooming"]
 - ["So20UIScrollViewDelegateP", "viewForZoomingInScrollView"]
 - !private ["So16UIStateRestoringP", "view"]
+- ["So15UITextDraggableP", "DidEndEditingReason"]
 - !private ["So15UITextDraggableP", "delegate"]
 - !private ["So15UITextDraggableP", "returnKeyType"]
+- ["So15UITextDroppableP", "DidEndEditingReason"]
 - !private ["So15UITextDroppableP", "delegate"]
 - !private ["So15UITextDroppableP", "returnKeyType"]
+- ["So11UITextFieldC", "DidEndEditingReason"]
 - !private ["So11UITextFieldC", "delegate"]
 - !private ["So11UITextFieldC", "returnKeyType"]
-- ["So19UITextFieldDelegateP", "AnyHashable"]
 - !private ["So19UITextFieldDelegateP", "IQKeyboardManager"]
+- ["So19UITextFieldDelegateP", "IQTextFieldViewInfoModal"]
 - ["So19UITextFieldDelegateP", "UIReturnKeyType"]
 - !private ["So19UITextFieldDelegateP", "UITextFieldDelegate"]
 - !private ["So19UITextFieldDelegateP", "UITextViewDelegate"]
+- !private ["So19UITextFieldDelegateP", "UIView"]
 - ["So19UITextFieldDelegateP", ""]
 - ["So19UITextFieldDelegateP", "addResponderFromView"]
 - ["So19UITextFieldDelegateP", "addTextFieldView"]
@@ -1032,9 +1058,6 @@ depends-member:
 - ["So19UITextFieldDelegateP", "delegate"]
 - ["So19UITextFieldDelegateP", "goToNextResponderOrResign"]
 - ["So19UITextFieldDelegateP", "init"]
-- ["So19UITextFieldDelegateP", "kIQTextField"]
-- ["So19UITextFieldDelegateP", "kIQTextFieldDelegate"]
-- ["So19UITextFieldDelegateP", "kIQTextFieldReturnKeyType"]
 - ["So19UITextFieldDelegateP", "lastTextFieldReturnKeyType"]
 - ["So19UITextFieldDelegateP", "removeResponderFromView"]
 - ["So19UITextFieldDelegateP", "removeTextFieldView"]
@@ -1072,22 +1095,26 @@ depends-member:
 - ["So19UITextFieldDelegateP", "updateReturnKeyTypeOnTextField"]
 - ["So19UITextFieldDelegateP", "viewForZooming"]
 - ["So19UITextFieldDelegateP", "viewForZoomingInScrollView"]
-- !private ["So11UITextInputP", ""]
+- ["So11UITextInputP", "DidEndEditingReason"]
+- ["So11UITextInputP", ""]
 - !private ["So11UITextInputP", "delegate"]
 - !private ["So11UITextInputP", "returnKeyType"]
+- ["So17UITextInputTraitsP", "DidEndEditingReason"]
 - ["So17UITextInputTraitsP", ""]
 - !private ["So17UITextInputTraitsP", "delegate"]
 - !private ["So17UITextInputTraitsP", "returnKeyType"]
-- !private ["So34UITextPasteConfigurationSupportingP", ""]
+- ["So34UITextPasteConfigurationSupportingP", "DidEndEditingReason"]
+- ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So34UITextPasteConfigurationSupportingP", "delegate"]
 - !private ["So34UITextPasteConfigurationSupportingP", "returnKeyType"]
 - !private ["So10UITextViewC", "delegate"]
 - !private ["So10UITextViewC", "returnKeyType"]
-- ["So18UITextViewDelegateP", "AnyHashable"]
 - !private ["So18UITextViewDelegateP", "IQKeyboardManager"]
+- ["So18UITextViewDelegateP", "IQTextFieldViewInfoModal"]
 - ["So18UITextViewDelegateP", "UIReturnKeyType"]
 - !private ["So18UITextViewDelegateP", "UITextFieldDelegate"]
 - !private ["So18UITextViewDelegateP", "UITextViewDelegate"]
+- !private ["So18UITextViewDelegateP", "UIView"]
 - ["So18UITextViewDelegateP", ""]
 - ["So18UITextViewDelegateP", "addResponderFromView"]
 - ["So18UITextViewDelegateP", "addTextFieldView"]
@@ -1095,9 +1122,6 @@ depends-member:
 - ["So18UITextViewDelegateP", "delegate"]
 - ["So18UITextViewDelegateP", "goToNextResponderOrResign"]
 - ["So18UITextViewDelegateP", "init"]
-- ["So18UITextViewDelegateP", "kIQTextField"]
-- ["So18UITextViewDelegateP", "kIQTextFieldDelegate"]
-- ["So18UITextViewDelegateP", "kIQTextFieldReturnKeyType"]
 - ["So18UITextViewDelegateP", "lastTextFieldReturnKeyType"]
 - ["So18UITextViewDelegateP", "removeResponderFromView"]
 - ["So18UITextViewDelegateP", "removeTextFieldView"]
@@ -1135,24 +1159,27 @@ depends-member:
 - ["So18UITextViewDelegateP", "updateReturnKeyTypeOnTextField"]
 - ["So18UITextViewDelegateP", "viewForZooming"]
 - ["So18UITextViewDelegateP", "viewForZoomingInScrollView"]
+- ["So18UITraitEnvironmentP", "DidEndEditingReason"]
 - !private ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "becomeFirstResponder"]
-- !private ["So18UITraitEnvironmentP", "deepResponderViews"]
+- ["So18UITraitEnvironmentP", "deepResponderViews"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "responderSiblings"]
 - !private ["So18UITraitEnvironmentP", "returnKeyType"]
 - !private ["So18UITraitEnvironmentP", "superviewOfClassType"]
 - !private ["So18UITraitEnvironmentP", "view"]
+- ["So23UIUserActivityRestoringP", "DidEndEditingReason"]
 - !private ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "becomeFirstResponder"]
-- !private ["So23UIUserActivityRestoringP", "deepResponderViews"]
+- ["So23UIUserActivityRestoringP", "deepResponderViews"]
 - !private ["So23UIUserActivityRestoringP", "delegate"]
 - !private ["So23UIUserActivityRestoringP", "resignFirstResponder"]
 - !private ["So23UIUserActivityRestoringP", "responderSiblings"]
 - !private ["So23UIUserActivityRestoringP", "returnKeyType"]
 - !private ["So23UIUserActivityRestoringP", "superviewOfClassType"]
 - !private ["So23UIUserActivityRestoringP", "view"]
+- ["So6UIViewC", "DidEndEditingReason"]
 - ["So6UIViewC", ""]
 - !private ["So6UIViewC", "becomeFirstResponder"]
 - !private ["So6UIViewC", "deepResponderViews"]
@@ -1164,7 +1191,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "view"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "count"]
-- !private ["s14_ArrayProtocolP", "index"]
+- !private ["s14_ArrayProtocolP", "firstIndex"]
 - ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "last"]
 - !private ["s14_ArrayProtocolP", "remove"]
@@ -1174,7 +1201,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "count"]
-- !private ["s24_DestructorSafeContainerP", "index"]
+- !private ["s24_DestructorSafeContainerP", "firstIndex"]
 - ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "last"]
 - !private ["s24_DestructorSafeContainerP", "remove"]
@@ -1183,13 +1210,13 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "sortedArrayByTag"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "append"]
 - !private ["s19_HasContiguousBytesP", "count"]
-- !private ["s19_HasContiguousBytesP", "index"]
+- !private ["s19_HasContiguousBytesP", "firstIndex"]
 - ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s19_HasContiguousBytesP", "remove"]
@@ -1199,7 +1226,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "index"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "firstIndex"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
@@ -1207,11 +1234,13 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "sortedArrayByPosition"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "sortedArrayByTag"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "AnyHashable"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DidEndEditingReason"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IQKeyboardManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "IQTextFieldViewInfoModal"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIReturnKeyType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITextFieldDelegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITextViewDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addResponderFromView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addTextFieldView"]
@@ -1220,10 +1249,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "goToNextResponderOrResign"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "kIQTextField"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "kIQTextFieldDelegate"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "kIQTextFieldReturnKeyType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lastTextFieldReturnKeyType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "originalReturnKeyType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeResponderFromView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeTextFieldView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resignFirstResponder"]
@@ -1242,9 +1269,10 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewWillBeginDragging"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewWillBeginZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewWillEndDragging"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "superviewOfClassType"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDelegate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDidBeginEditing"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDidChangeSelection"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDidEndEditing"]
@@ -1253,8 +1281,10 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldClear"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldEndEditing"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldReturn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textFieldView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textFieldViewCachedInfo"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textViewDelegate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textViewDidBeginEditing"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textViewDidChange"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textViewDidChangeSelection"]
@@ -1267,11 +1297,13 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
-- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AnyHashable"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DidEndEditingReason"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IQKeyboardManager"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IQTextFieldViewInfoModal"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIReturnKeyType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UITextFieldDelegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UITextViewDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIView"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addResponderFromView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addTextFieldView"]
@@ -1280,10 +1312,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "goToNextResponderOrResign"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kIQTextField"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kIQTextFieldDelegate"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kIQTextFieldReturnKeyType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lastTextFieldReturnKeyType"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "originalReturnKeyType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeResponderFromView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeTextFieldView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resignFirstResponder"]
@@ -1302,9 +1332,10 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scrollViewWillBeginDragging"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scrollViewWillBeginZooming"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scrollViewWillEndDragging"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedManager"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "superviewOfClassType"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textField"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldDelegate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldDidBeginEditing"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldDidChangeSelection"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldDidEndEditing"]
@@ -1313,8 +1344,10 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldShouldClear"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldShouldEndEditing"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldShouldReturn"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldViewCachedInfo"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textViewDelegate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textViewDidBeginEditing"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textViewDidChange"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textViewDidChangeSelection"]
@@ -1329,7 +1362,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewForZoomingInScrollView"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
-- !private ["s21_ObjectiveCBridgeableP", "index"]
+- !private ["s21_ObjectiveCBridgeableP", "firstIndex"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
 - !private ["s21_ObjectiveCBridgeableP", "remove"]
@@ -1337,6 +1370,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "sortedArrayByPosition"]
 - !private ["s21_ObjectiveCBridgeableP", "sortedArrayByTag"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "DidEndEditingReason"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "becomeFirstResponder"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "deepResponderViews"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "delegate"]
@@ -1348,34 +1382,32 @@ depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - "Sa"
 - "SK"
-- !private "So15CALayerDelegateP"
+- "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "Sl"
-- !private "SL"
+- "SL"
 - "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "10Foundation12DataProtocolP"
 - "Se"
-- !private "SD"
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
-- !private "s30ExpressibleByDictionaryLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - "22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO"
 - !private "22IQKeyboardManagerSwift0aB0C"
 - "22IQKeyboardManagerSwift0A16ReturnKeyHandlerC"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - "SM"
 - "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
@@ -1389,57 +1421,57 @@ depends-nominal:
 - "ST"
 - !private "s13SignedNumericP"
 - !private "Sx"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
-- !private "So29UIAccessibilityIdentificationP"
-- !private "So12UIAppearanceP"
-- !private "So21UIAppearanceContainerP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
 - !private "So18UIContentContainerP"
-- !private "So30UIContentSizeCategoryAdjustingP"
-- !private "So32UIContextMenuInteractionDelegateP"
+- "So30UIContentSizeCategoryAdjustingP"
+- "So32UIContextMenuInteractionDelegateP"
 - "So9UIControlC"
-- !private "So17UICoordinateSpaceP"
-- !private "So13UIDynamicItemP"
-- !private "So18UIFocusEnvironmentP"
-- !private "So11UIFocusItemP"
-- !private "So20UIFocusItemContainerP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - "So10UIKeyInputP"
-- !private "So24UILargeContentViewerItemP"
-- !private "So30UIPasteConfigurationSupportingP"
+- "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
-- !private "So30UIResponderStandardEditActionsP"
+- "So30UIResponderStandardEditActionsP"
 - "So15UIReturnKeyTypeV"
 - "So12UIScrollViewC"
 - "So20UIScrollViewDelegateP"
 - !private "So16UIStateRestoringP"
-- !private "So15UITextDraggableP"
-- !private "So15UITextDroppableP"
-- !private "So11UITextFieldC"
+- "So15UITextDraggableP"
+- "So15UITextDroppableP"
+- "So11UITextFieldC"
 - "So19UITextFieldDelegateP"
-- !private "So11UITextInputP"
+- "So11UITextInputP"
 - "So17UITextInputTraitsP"
-- !private "So34UITextPasteConfigurationSupportingP"
+- "So34UITextPasteConfigurationSupportingP"
 - !private "So10UITextViewC"
 - "So18UITextViewDelegateP"
-- !private "So18UITraitEnvironmentP"
-- !private "So23UIUserActivityRestoringP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - !private "So16UIViewControllerC"
 - "s14_ArrayProtocolP"
 - "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
-- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -1472,4 +1504,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "dff0032414d7fbda2a218648b5f703df"
+interface-hash: "d27ef496aba45a2c25fd717da6302fee"

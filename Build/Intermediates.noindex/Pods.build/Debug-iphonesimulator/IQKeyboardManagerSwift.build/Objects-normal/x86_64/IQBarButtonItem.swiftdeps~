@@ -14,17 +14,19 @@ provides-dynamic-lookup:
 - "tintColor"
 depends-top-level:
 - "AnyObject"
+- !private "Array"
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
 - !private "FloatLiteralType"
 - "IQBarButtonItem"
+- "IQInvocation"
 - !private "IntegerLiteralType"
-- !private "NSAttributedStringKey"
+- !private "NSAttributedString"
 - "NSCoder"
 - "Selector"
 - "UIBarButtonItem"
 - "UIColor"
-- "UIControlState"
+- "UIControl"
 - !private "UIOffset"
 - "Void"
 - "classInitialize"
@@ -35,8 +37,12 @@ depends-top-level:
 - !private "titleTextAttributes"
 depends-member:
 - !private ["SK", ""]
+- !private ["So15CALayerDelegateP", "State"]
 - !private ["s7CVarArgP", "IQBarButtonItem"]
-- !private ["s7CVarArgP", "NSAttributedStringKey"]
+- !private ["s7CVarArgP", "IQInvocation"]
+- !private ["s7CVarArgP", "Key"]
+- !private ["s7CVarArgP", "NSAttributedString"]
+- !private ["s7CVarArgP", "State"]
 - !private ["s7CVarArgP", "UIOffset"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_classInitialize"]
@@ -44,18 +50,26 @@ depends-member:
 - ["s7CVarArgP", "classInitialize"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "invocation"]
+- !private ["s7CVarArgP", "setBackButtonBackgroundImage"]
 - !private ["s7CVarArgP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["s7CVarArgP", "setBackgroundImage"]
 - !private ["s7CVarArgP", "setBackgroundVerticalPositionAdjustment"]
 - !private ["s7CVarArgP", "setTarget"]
 - !private ["s7CVarArgP", "setTitlePositionAdjustment"]
 - !private ["s7CVarArgP", "setTitleTextAttributes"]
+- !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "target"]
 - !private ["s7CVarArgP", "tintColor"]
 - !private ["s7CVarArgP", "titleTextAttributes"]
 - !private ["Sl", ""]
+- !private ["Sl", "init"]
+- !private ["Sl", "subscript"]
 - !private ["SL", ""]
 - !private ["s28CustomDebugStringConvertibleP", "IQBarButtonItem"]
-- !private ["s28CustomDebugStringConvertibleP", "NSAttributedStringKey"]
+- !private ["s28CustomDebugStringConvertibleP", "IQInvocation"]
+- !private ["s28CustomDebugStringConvertibleP", "Key"]
+- !private ["s28CustomDebugStringConvertibleP", "NSAttributedString"]
+- !private ["s28CustomDebugStringConvertibleP", "State"]
 - !private ["s28CustomDebugStringConvertibleP", "UIOffset"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "_classInitialize"]
@@ -63,16 +77,24 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "classInitialize"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "invocation"]
+- !private ["s28CustomDebugStringConvertibleP", "setBackButtonBackgroundImage"]
 - !private ["s28CustomDebugStringConvertibleP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["s28CustomDebugStringConvertibleP", "setBackgroundImage"]
 - !private ["s28CustomDebugStringConvertibleP", "setBackgroundVerticalPositionAdjustment"]
 - !private ["s28CustomDebugStringConvertibleP", "setTarget"]
 - !private ["s28CustomDebugStringConvertibleP", "setTitlePositionAdjustment"]
 - !private ["s28CustomDebugStringConvertibleP", "setTitleTextAttributes"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "target"]
 - !private ["s28CustomDebugStringConvertibleP", "tintColor"]
 - !private ["s28CustomDebugStringConvertibleP", "titleTextAttributes"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "IQBarButtonItem"]
-- !private ["s23CustomStringConvertibleP", "NSAttributedStringKey"]
+- !private ["s23CustomStringConvertibleP", "IQInvocation"]
+- !private ["s23CustomStringConvertibleP", "Key"]
+- !private ["s23CustomStringConvertibleP", "NSAttributedString"]
+- !private ["s23CustomStringConvertibleP", "State"]
 - !private ["s23CustomStringConvertibleP", "UIOffset"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_classInitialize"]
@@ -80,39 +102,66 @@ depends-member:
 - ["s23CustomStringConvertibleP", "classInitialize"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "invocation"]
+- !private ["s23CustomStringConvertibleP", "setBackButtonBackgroundImage"]
 - !private ["s23CustomStringConvertibleP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["s23CustomStringConvertibleP", "setBackgroundImage"]
 - !private ["s23CustomStringConvertibleP", "setBackgroundVerticalPositionAdjustment"]
 - !private ["s23CustomStringConvertibleP", "setTarget"]
 - !private ["s23CustomStringConvertibleP", "setTitlePositionAdjustment"]
 - !private ["s23CustomStringConvertibleP", "setTitleTextAttributes"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "target"]
 - !private ["s23CustomStringConvertibleP", "tintColor"]
 - !private ["s23CustomStringConvertibleP", "titleTextAttributes"]
-- !private ["Se", "zero"]
-- !private ["SE", "zero"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["SD", "init"]
+- !private ["SD", "subscript"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
 - !private ["SQ", "IQBarButtonItem"]
-- !private ["SQ", "NSAttributedStringKey"]
+- !private ["SQ", "IQInvocation"]
+- !private ["SQ", "Key"]
+- !private ["SQ", "NSAttributedString"]
+- !private ["SQ", "State"]
 - !private ["SQ", "UIOffset"]
 - ["SQ", ""]
 - !private ["SQ", "_classInitialize"]
 - !private ["SQ", "appearance"]
+- !private ["SQ", "application"]
 - ["SQ", "classInitialize"]
 - !private ["SQ", "default"]
+- !private ["SQ", "disabled"]
+- !private ["SQ", "done"]
 - !private ["SQ", "foregroundColor"]
+- !private ["SQ", "highlighted"]
 - !private ["SQ", "init"]
 - !private ["SQ", "invocation"]
 - !private ["SQ", "normal"]
+- !private ["SQ", "plain"]
+- !private ["SQ", "reserved"]
+- !private ["SQ", "selected"]
+- !private ["SQ", "setBackButtonBackgroundImage"]
 - !private ["SQ", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["SQ", "setBackgroundImage"]
 - !private ["SQ", "setBackgroundVerticalPositionAdjustment"]
 - !private ["SQ", "setTarget"]
 - !private ["SQ", "setTitlePositionAdjustment"]
 - !private ["SQ", "setTitleTextAttributes"]
+- !private ["SQ", "subscript"]
 - !private ["SQ", "target"]
 - !private ["SQ", "tintColor"]
 - !private ["SQ", "titleTextAttributes"]
-- !private ["SQ", "zero"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "application"]
+- !private ["s25ExpressibleByArrayLiteralP", "disabled"]
+- !private ["s25ExpressibleByArrayLiteralP", "highlighted"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
+- !private ["s25ExpressibleByArrayLiteralP", "reserved"]
+- !private ["s25ExpressibleByArrayLiteralP", "selected"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
@@ -120,31 +169,40 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SH", "IQBarButtonItem"]
-- !private ["SH", "NSAttributedStringKey"]
+- !private ["SH", "IQInvocation"]
+- !private ["SH", "Key"]
+- !private ["SH", "NSAttributedString"]
+- !private ["SH", "State"]
 - !private ["SH", "UIOffset"]
 - ["SH", ""]
 - !private ["SH", "_classInitialize"]
 - !private ["SH", "appearance"]
 - ["SH", "classInitialize"]
 - !private ["SH", "default"]
+- !private ["SH", "done"]
 - !private ["SH", "foregroundColor"]
 - !private ["SH", "init"]
 - !private ["SH", "invocation"]
+- !private ["SH", "plain"]
+- !private ["SH", "setBackButtonBackgroundImage"]
 - !private ["SH", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["SH", "setBackgroundImage"]
 - !private ["SH", "setBackgroundVerticalPositionAdjustment"]
 - !private ["SH", "setTarget"]
 - !private ["SH", "setTitlePositionAdjustment"]
 - !private ["SH", "setTitleTextAttributes"]
+- !private ["SH", "subscript"]
 - !private ["SH", "target"]
 - !private ["SH", "tintColor"]
 - !private ["SH", "titleTextAttributes"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "AnyObject"]
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "IQBarButtonItem"]
-- !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "NSAttributedStringKey"]
+- ["22IQKeyboardManagerSwift15IQBarButtonItemC", "IQInvocation"]
+- !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "NSAttributedString"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "NSCoder"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "Selector"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "UIColor"]
-- !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "UIControlState"]
+- !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "UIControl"]
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "UIOffset"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "Void"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", ""]
@@ -155,7 +213,9 @@ depends-member:
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "init"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "invocation"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "isSystemItem"]
+- !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "setBackButtonBackgroundImage"]
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "setBackgroundImage"]
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "setBackgroundVerticalPositionAdjustment"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "setTarget"]
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "setTitlePositionAdjustment"]
@@ -163,15 +223,20 @@ depends-member:
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "target"]
 - ["22IQKeyboardManagerSwift15IQBarButtonItemC", "tintColor"]
 - !private ["22IQKeyboardManagerSwift15IQBarButtonItemC", "titleTextAttributes"]
+- !private ["22IQKeyboardManagerSwift12IQInvocationC", "init"]
 - !private ["So21NSAttributedStringKeya", "foregroundColor"]
 - !private ["s25LosslessStringConvertibleP", ""]
+- !private ["So18NSAttributedStringC", "Key"]
 - ["So8NSCodingP", "AnyObject"]
 - !private ["So8NSCodingP", "IQBarButtonItem"]
-- !private ["So8NSCodingP", "NSAttributedStringKey"]
+- ["So8NSCodingP", "IQInvocation"]
+- !private ["So8NSCodingP", "Key"]
+- !private ["So8NSCodingP", "NSAttributedString"]
 - ["So8NSCodingP", "NSCoder"]
 - ["So8NSCodingP", "Selector"]
+- !private ["So8NSCodingP", "State"]
 - ["So8NSCodingP", "UIColor"]
-- !private ["So8NSCodingP", "UIControlState"]
+- !private ["So8NSCodingP", "UIControl"]
 - !private ["So8NSCodingP", "UIOffset"]
 - ["So8NSCodingP", "Void"]
 - ["So8NSCodingP", ""]
@@ -182,7 +247,9 @@ depends-member:
 - ["So8NSCodingP", "init"]
 - ["So8NSCodingP", "invocation"]
 - ["So8NSCodingP", "isSystemItem"]
+- !private ["So8NSCodingP", "setBackButtonBackgroundImage"]
 - !private ["So8NSCodingP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So8NSCodingP", "setBackgroundImage"]
 - !private ["So8NSCodingP", "setBackgroundVerticalPositionAdjustment"]
 - ["So8NSCodingP", "setTarget"]
 - !private ["So8NSCodingP", "setTitlePositionAdjustment"]
@@ -190,13 +257,20 @@ depends-member:
 - !private ["So8NSCodingP", "target"]
 - ["So8NSCodingP", "tintColor"]
 - !private ["So8NSCodingP", "titleTextAttributes"]
+- !private ["So9NSCopyingP", "Key"]
+- !private ["So21NSItemProviderReadingP", "Key"]
+- !private ["So21NSItemProviderWritingP", "Key"]
+- !private ["So16NSMutableCopyingP", "Key"]
 - ["So8NSObjectC", "AnyObject"]
 - !private ["So8NSObjectC", "IQBarButtonItem"]
-- !private ["So8NSObjectC", "NSAttributedStringKey"]
+- ["So8NSObjectC", "IQInvocation"]
+- !private ["So8NSObjectC", "Key"]
+- !private ["So8NSObjectC", "NSAttributedString"]
 - ["So8NSObjectC", "NSCoder"]
 - ["So8NSObjectC", "Selector"]
+- !private ["So8NSObjectC", "State"]
 - ["So8NSObjectC", "UIColor"]
-- !private ["So8NSObjectC", "UIControlState"]
+- !private ["So8NSObjectC", "UIControl"]
 - !private ["So8NSObjectC", "UIOffset"]
 - ["So8NSObjectC", "Void"]
 - ["So8NSObjectC", ""]
@@ -206,7 +280,9 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "invocation"]
 - ["So8NSObjectC", "isSystemItem"]
+- !private ["So8NSObjectC", "setBackButtonBackgroundImage"]
 - !private ["So8NSObjectC", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So8NSObjectC", "setBackgroundImage"]
 - !private ["So8NSObjectC", "setBackgroundVerticalPositionAdjustment"]
 - ["So8NSObjectC", "setTarget"]
 - !private ["So8NSObjectC", "setTitlePositionAdjustment"]
@@ -217,11 +293,14 @@ depends-member:
 - !private ["So8NSObjectC", "titleTextAttributesForState"]
 - ["So8NSObjectP", "AnyObject"]
 - !private ["So8NSObjectP", "IQBarButtonItem"]
-- !private ["So8NSObjectP", "NSAttributedStringKey"]
+- ["So8NSObjectP", "IQInvocation"]
+- !private ["So8NSObjectP", "Key"]
+- !private ["So8NSObjectP", "NSAttributedString"]
 - ["So8NSObjectP", "NSCoder"]
 - ["So8NSObjectP", "Selector"]
+- !private ["So8NSObjectP", "State"]
 - ["So8NSObjectP", "UIColor"]
-- !private ["So8NSObjectP", "UIControlState"]
+- !private ["So8NSObjectP", "UIControl"]
 - !private ["So8NSObjectP", "UIOffset"]
 - ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
@@ -232,7 +311,9 @@ depends-member:
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "invocation"]
 - ["So8NSObjectP", "isSystemItem"]
+- !private ["So8NSObjectP", "setBackButtonBackgroundImage"]
 - !private ["So8NSObjectP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So8NSObjectP", "setBackgroundImage"]
 - !private ["So8NSObjectP", "setBackgroundVerticalPositionAdjustment"]
 - ["So8NSObjectP", "setTarget"]
 - !private ["So8NSObjectP", "setTitlePositionAdjustment"]
@@ -241,27 +322,56 @@ depends-member:
 - ["So8NSObjectP", "tintColor"]
 - !private ["So8NSObjectP", "titleTextAttributes"]
 - !private ["So8NSObjectP", "titleTextAttributesForState"]
+- !private ["So14NSSecureCodingP", "Key"]
+- !private ["s9OptionSetP", "application"]
+- !private ["s9OptionSetP", "disabled"]
+- !private ["s9OptionSetP", "highlighted"]
 - !private ["s9OptionSetP", "normal"]
+- !private ["s9OptionSetP", "reserved"]
+- !private ["s9OptionSetP", "selected"]
 - !private ["SY", ""]
+- !private ["SY", "application"]
 - !private ["SY", "default"]
+- !private ["SY", "disabled"]
+- !private ["SY", "done"]
 - !private ["SY", "foregroundColor"]
+- !private ["SY", "highlighted"]
 - !private ["SY", "normal"]
+- !private ["SY", "plain"]
+- !private ["SY", "reserved"]
+- !private ["SY", "selected"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
 - !private ["ST", ""]
+- !private ["ST", "init"]
 - !private ["ST", "makeIterator"]
+- !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "application"]
+- !private ["s10SetAlgebraP", "disabled"]
+- !private ["s10SetAlgebraP", "highlighted"]
 - !private ["s10SetAlgebraP", "normal"]
+- !private ["s10SetAlgebraP", "reserved"]
+- !private ["s10SetAlgebraP", "selected"]
+- !private ["So14UIControlStateV", "application"]
+- !private ["So14UIControlStateV", "disabled"]
+- !private ["So14UIControlStateV", "highlighted"]
 - !private ["So14UIControlStateV", "normal"]
+- !private ["So14UIControlStateV", "reserved"]
+- !private ["So14UIControlStateV", "selected"]
+- !private ["So20UIBarButtonItemStyleV", "done"]
+- !private ["So20UIBarButtonItemStyleV", "plain"]
 - !private ["s16TextOutputStreamP", ""]
 - !private ["s20TextOutputStreamableP", ""]
 - ["So29UIAccessibilityIdentificationP", "AnyObject"]
 - !private ["So29UIAccessibilityIdentificationP", "IQBarButtonItem"]
-- !private ["So29UIAccessibilityIdentificationP", "NSAttributedStringKey"]
+- ["So29UIAccessibilityIdentificationP", "IQInvocation"]
+- !private ["So29UIAccessibilityIdentificationP", "NSAttributedString"]
 - ["So29UIAccessibilityIdentificationP", "NSCoder"]
 - ["So29UIAccessibilityIdentificationP", "Selector"]
+- !private ["So29UIAccessibilityIdentificationP", "State"]
 - ["So29UIAccessibilityIdentificationP", "UIColor"]
-- !private ["So29UIAccessibilityIdentificationP", "UIControlState"]
+- !private ["So29UIAccessibilityIdentificationP", "UIControl"]
 - !private ["So29UIAccessibilityIdentificationP", "UIOffset"]
 - ["So29UIAccessibilityIdentificationP", "Void"]
 - ["So29UIAccessibilityIdentificationP", ""]
@@ -272,7 +382,9 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "init"]
 - ["So29UIAccessibilityIdentificationP", "invocation"]
 - ["So29UIAccessibilityIdentificationP", "isSystemItem"]
+- !private ["So29UIAccessibilityIdentificationP", "setBackButtonBackgroundImage"]
 - !private ["So29UIAccessibilityIdentificationP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So29UIAccessibilityIdentificationP", "setBackgroundImage"]
 - !private ["So29UIAccessibilityIdentificationP", "setBackgroundVerticalPositionAdjustment"]
 - ["So29UIAccessibilityIdentificationP", "setTarget"]
 - !private ["So29UIAccessibilityIdentificationP", "setTitlePositionAdjustment"]
@@ -282,11 +394,13 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "titleTextAttributes"]
 - ["So12UIAppearanceP", "AnyObject"]
 - !private ["So12UIAppearanceP", "IQBarButtonItem"]
-- !private ["So12UIAppearanceP", "NSAttributedStringKey"]
+- ["So12UIAppearanceP", "IQInvocation"]
+- !private ["So12UIAppearanceP", "NSAttributedString"]
 - ["So12UIAppearanceP", "NSCoder"]
 - ["So12UIAppearanceP", "Selector"]
+- !private ["So12UIAppearanceP", "State"]
 - ["So12UIAppearanceP", "UIColor"]
-- !private ["So12UIAppearanceP", "UIControlState"]
+- !private ["So12UIAppearanceP", "UIControl"]
 - !private ["So12UIAppearanceP", "UIOffset"]
 - ["So12UIAppearanceP", "Void"]
 - ["So12UIAppearanceP", ""]
@@ -297,7 +411,9 @@ depends-member:
 - ["So12UIAppearanceP", "init"]
 - ["So12UIAppearanceP", "invocation"]
 - ["So12UIAppearanceP", "isSystemItem"]
+- !private ["So12UIAppearanceP", "setBackButtonBackgroundImage"]
 - !private ["So12UIAppearanceP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So12UIAppearanceP", "setBackgroundImage"]
 - !private ["So12UIAppearanceP", "setBackgroundVerticalPositionAdjustment"]
 - ["So12UIAppearanceP", "setTarget"]
 - !private ["So12UIAppearanceP", "setTitlePositionAdjustment"]
@@ -305,13 +421,15 @@ depends-member:
 - !private ["So12UIAppearanceP", "target"]
 - ["So12UIAppearanceP", "tintColor"]
 - !private ["So12UIAppearanceP", "titleTextAttributes"]
+- !private ["So21UIAppearanceContainerP", "State"]
 - ["So15UIBarButtonItemC", "AnyObject"]
 - !private ["So15UIBarButtonItemC", "IQBarButtonItem"]
-- !private ["So15UIBarButtonItemC", "NSAttributedStringKey"]
+- ["So15UIBarButtonItemC", "IQInvocation"]
+- !private ["So15UIBarButtonItemC", "NSAttributedString"]
 - ["So15UIBarButtonItemC", "NSCoder"]
 - ["So15UIBarButtonItemC", "Selector"]
 - ["So15UIBarButtonItemC", "UIColor"]
-- !private ["So15UIBarButtonItemC", "UIControlState"]
+- !private ["So15UIBarButtonItemC", "UIControl"]
 - !private ["So15UIBarButtonItemC", "UIOffset"]
 - ["So15UIBarButtonItemC", "Void"]
 - ["So15UIBarButtonItemC", ""]
@@ -321,7 +439,9 @@ depends-member:
 - ["So15UIBarButtonItemC", "init"]
 - ["So15UIBarButtonItemC", "invocation"]
 - ["So15UIBarButtonItemC", "isSystemItem"]
+- !private ["So15UIBarButtonItemC", "setBackButtonBackgroundImage"]
 - !private ["So15UIBarButtonItemC", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So15UIBarButtonItemC", "setBackgroundImage"]
 - !private ["So15UIBarButtonItemC", "setBackgroundVerticalPositionAdjustment"]
 - ["So15UIBarButtonItemC", "setTarget"]
 - !private ["So15UIBarButtonItemC", "setTitlePositionAdjustment"]
@@ -331,11 +451,12 @@ depends-member:
 - !private ["So15UIBarButtonItemC", "titleTextAttributes"]
 - ["So9UIBarItemC", "AnyObject"]
 - !private ["So9UIBarItemC", "IQBarButtonItem"]
-- !private ["So9UIBarItemC", "NSAttributedStringKey"]
+- ["So9UIBarItemC", "IQInvocation"]
+- !private ["So9UIBarItemC", "NSAttributedString"]
 - ["So9UIBarItemC", "NSCoder"]
 - ["So9UIBarItemC", "Selector"]
 - ["So9UIBarItemC", "UIColor"]
-- !private ["So9UIBarItemC", "UIControlState"]
+- !private ["So9UIBarItemC", "UIControl"]
 - !private ["So9UIBarItemC", "UIOffset"]
 - ["So9UIBarItemC", "Void"]
 - ["So9UIBarItemC", ""]
@@ -345,7 +466,9 @@ depends-member:
 - ["So9UIBarItemC", "init"]
 - ["So9UIBarItemC", "invocation"]
 - ["So9UIBarItemC", "isSystemItem"]
+- !private ["So9UIBarItemC", "setBackButtonBackgroundImage"]
 - !private ["So9UIBarItemC", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So9UIBarItemC", "setBackgroundImage"]
 - !private ["So9UIBarItemC", "setBackgroundVerticalPositionAdjustment"]
 - ["So9UIBarItemC", "setTarget"]
 - !private ["So9UIBarItemC", "setTitlePositionAdjustment"]
@@ -354,14 +477,27 @@ depends-member:
 - ["So9UIBarItemC", "tintColor"]
 - !private ["So9UIBarItemC", "titleTextAttributes"]
 - !private ["So12UIBarMetricsV", "default"]
-- !private ["So8UIOffsetV", "zero"]
+- !private ["So32UIContextMenuInteractionDelegateP", "State"]
+- !private ["So9UIControlC", "State"]
+- !private ["So17UICoordinateSpaceP", "State"]
+- !private ["So13UIDynamicItemP", "State"]
+- !private ["So18UIFocusEnvironmentP", "State"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "State"]
+- !private ["So20UIFocusItemContainerP", "State"]
+- !private ["So24UILargeContentViewerItemP", "State"]
+- !private ["So8UIOffsetV", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "State"]
+- !private ["So11UIResponderC", "State"]
+- !private ["So30UIResponderStandardEditActionsP", "State"]
 - ["So35UISpringLoadedInteractionSupportingP", "AnyObject"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "IQBarButtonItem"]
-- !private ["So35UISpringLoadedInteractionSupportingP", "NSAttributedStringKey"]
+- ["So35UISpringLoadedInteractionSupportingP", "IQInvocation"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "NSAttributedString"]
 - ["So35UISpringLoadedInteractionSupportingP", "NSCoder"]
 - ["So35UISpringLoadedInteractionSupportingP", "Selector"]
 - ["So35UISpringLoadedInteractionSupportingP", "UIColor"]
-- !private ["So35UISpringLoadedInteractionSupportingP", "UIControlState"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "UIControl"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "UIOffset"]
 - ["So35UISpringLoadedInteractionSupportingP", "Void"]
 - ["So35UISpringLoadedInteractionSupportingP", ""]
@@ -372,7 +508,9 @@ depends-member:
 - ["So35UISpringLoadedInteractionSupportingP", "init"]
 - ["So35UISpringLoadedInteractionSupportingP", "invocation"]
 - ["So35UISpringLoadedInteractionSupportingP", "isSystemItem"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "setBackButtonBackgroundImage"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "setBackgroundImage"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setBackgroundVerticalPositionAdjustment"]
 - ["So35UISpringLoadedInteractionSupportingP", "setTarget"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setTitlePositionAdjustment"]
@@ -380,14 +518,22 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "target"]
 - ["So35UISpringLoadedInteractionSupportingP", "tintColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleTextAttributes"]
+- !private ["So18UITraitEnvironmentP", "State"]
+- !private ["So23UIUserActivityRestoringP", "State"]
+- !private ["So6UIViewC", "State"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "foregroundColor"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IQBarButtonItem"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSAttributedStringKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "IQInvocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Key"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSAttributedString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "State"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIOffset"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "_classInitialize"]
@@ -395,7 +541,9 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "classInitialize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "invocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setBackButtonBackgroundImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setBackgroundImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setBackgroundVerticalPositionAdjustment"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setTarget"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setTitlePositionAdjustment"]
@@ -404,7 +552,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tintColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleTextAttributes"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IQBarButtonItem"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSAttributedStringKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IQInvocation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Key"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSAttributedString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "State"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIOffset"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_classInitialize"]
@@ -412,7 +563,9 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "classInitialize"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "invocation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setBackButtonBackgroundImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setBackButtonBackgroundVerticalPositionAdjustment"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setBackgroundImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setBackgroundVerticalPositionAdjustment"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setTarget"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setTitlePositionAdjustment"]
@@ -421,19 +574,25 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tintColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "titleTextAttributes"]
 - !private ["s21_ObjectiveCBridgeableP", "foregroundColor"]
-- !private ["s21_ObjectiveCBridgeableP", "zero"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s20_SwiftNewtypeWrapperP", "foregroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "State"]
 depends-nominal:
 - !private "SK"
+- !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "Sl"
 - !private "SL"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "Se"
+- !private "SD"
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
@@ -441,34 +600,58 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
 - "22IQKeyboardManagerSwift15IQBarButtonItemC"
+- !private "22IQKeyboardManagerSwift12IQInvocationC"
 - !private "So21NSAttributedStringKeya"
 - !private "s25LosslessStringConvertibleP"
+- !private "So18NSAttributedStringC"
 - "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "So14NSSecureCodingP"
 - !private "s9OptionSetP"
 - !private "SY"
 - !private "ST"
 - !private "s10SetAlgebraP"
 - !private "So14UIControlStateV"
+- !private "So20UIBarButtonItemStyleV"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
 - "So15UIBarButtonItemC"
 - "So9UIBarItemC"
 - !private "So12UIBarMetricsV"
+- !private "So32UIContextMenuInteractionDelegateP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
 - !private "So8UIOffsetV"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
 - "So35UISpringLoadedInteractionSupportingP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -501,4 +684,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0316f3125b9fabf0c9ae563409f318d5"
+interface-hash: "4a353d05e4ea3cf5b984102af784a516"

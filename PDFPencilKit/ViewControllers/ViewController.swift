@@ -97,10 +97,15 @@ class ViewController: UIViewController {
     
     @IBAction func newNoteBtnPressed(_ sender: Any) {
         print("new note button pressed")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CustomAlertViewController")
+        present(vc, animated: true, completion: nil)
+//        performSegue(withIdentifier: "toNewNoteViewController", sender: nil)
     }
     
     @IBAction func importPdfBtnPressed(_ sender: Any) {
         print("import button pressed")
+        
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {

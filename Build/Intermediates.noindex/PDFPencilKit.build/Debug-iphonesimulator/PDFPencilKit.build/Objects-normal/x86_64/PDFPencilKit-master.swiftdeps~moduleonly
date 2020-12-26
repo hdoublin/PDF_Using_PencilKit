@@ -1,13 +1,16 @@
 version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
 options: "f84205466d40c9c93c5049250d9d9797"
-build_time: [1608931696, 992034000]
+build_time: [1608995062, 196676000]
 inputs:
-  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/ViewController.swift": [1608929533, 891817815]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/PencilKitView/PKCanvas.swift": [1608967983, 347120017]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/PencilKitView/PencilKitInterface.swift": [1608940835, 764400116]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/ViewController.swift": [1608991365, 377271109]
   "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/UICollectionViewCell/contentCell.swift": [1608924638, 601563119]
   "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/Extensions/UIViewExtensions.swift": [1608917025, 357376695]
   "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/AppDelegates/AppDelegate.swift": [1608931666, 237057858]
   "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/Extensions/UIStatusBarColor.swift": [1608907759, 677164846]
-  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/PDFViewController.swift": [1608929533, 874671389]
-  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/CustomAlertViewController.swift": [1608930457, 467163968]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/PDFViewController.swift": [1608941093, 886915918]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/CustomAlertViewController.swift": [1608995061, 733098002]
+  "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/NewNoteViewController.swift": [1608973300, 875835842]
   "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/ViewControllers/UITableViewCell/sideCell.swift": [1608919735, 765977318]
   "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/PDFPencilKit/AppDelegates/SceneDelegate.swift": [1608369998, 307778719]

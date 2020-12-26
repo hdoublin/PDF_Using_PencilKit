@@ -190,6 +190,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreGraphics;
 @import Foundation;
+@import PencilKit;
 @import UIKit;
 #endif
 
@@ -221,23 +222,79 @@ SWIFT_CLASS("_TtC12PDFPencilKit11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
+@class UIButton;
+@class SkyFloatingLabelTextField;
+@class UISwitch;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12PDFPencilKit25CustomAlertViewController")
 @interface CustomAlertViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified alertViewContainer;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified closeBtn;
+@property (nonatomic, weak) IBOutlet SkyFloatingLabelTextField * _Null_unspecified NameTxt;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified addDateSwitch;
 - (void)viewDidLoad;
+- (IBAction)closeBtnPressed:(id _Nonnull)sender;
+- (IBAction)addDateSwitchSelected:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+@interface CustomAlertViewController (SWIFT_EXTENSION(PDFPencilKit)) <UITextFieldDelegate>
+@end
+
+@class PKCanvas;
+
+SWIFT_CLASS("_TtC12PDFPencilKit21NewNoteViewController")
+@interface NewNoteViewController : UIViewController
+@property (nonatomic, weak) IBOutlet PKCanvas * _Null_unspecified pencilBoardView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified homeBtn;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidLayoutSubviews;
+@property (nonatomic, readonly) BOOL prefersHomeIndicatorAutoHidden;
+@property (nonatomic, readonly) BOOL prefersStatusBarHidden;
+- (IBAction)homeBtnPressed:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 
 
 SWIFT_CLASS("_TtC12PDFPencilKit17PDFViewController")
 @interface PDFViewController : UIViewController
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (IBAction)homeBtnPressed:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12PDFPencilKit8PKCanvas")
+@interface PKCanvas : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class PKCanvasView;
+
+@interface PKCanvas (SWIFT_EXTENSION(PDFPencilKit)) <PKCanvasViewDelegate>
+/// Delegate method: Note that the drawing has changed.
+- (void)canvasViewDrawingDidChange:(PKCanvasView * _Nonnull)canvasView;
+@end
+
+@class PKToolPicker;
+
+@interface PKCanvas (SWIFT_EXTENSION(PDFPencilKit)) <PKToolPickerObserver>
+- (void)toolPickerSelectedToolDidChange:(PKToolPicker * _Nonnull)toolPicker;
+- (void)toolPickerIsRulerActiveDidChange:(PKToolPicker * _Nonnull)toolPicker;
+- (void)toolPickerVisibilityDidChange:(PKToolPicker * _Nonnull)toolPicker;
+- (void)toolPickerFramesObscuredDidChange:(PKToolPicker * _Nonnull)toolPicker;
 @end
 
 @class UIWindow;
@@ -257,10 +314,8 @@ SWIFT_CLASS("_TtC12PDFPencilKit13SceneDelegate") SWIFT_AVAILABILITY(ios,introduc
 
 
 @class UISearchBar;
-@class UIButton;
 @class UITableView;
 @class UILabel;
-@class UIView;
 @class UICollectionView;
 
 SWIFT_CLASS("_TtC12PDFPencilKit14ViewController")

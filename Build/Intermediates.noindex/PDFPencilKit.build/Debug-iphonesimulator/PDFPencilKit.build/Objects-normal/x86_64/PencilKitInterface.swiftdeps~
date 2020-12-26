@@ -1,0 +1,269 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PencilKitDelegate"
+- "PencilKitInterface"
+provides-nominal:
+- "12PDFPencilKit06PencilB8DelegateP"
+- "12PDFPencilKit06PencilB9InterfaceP"
+provides-member:
+- ["12PDFPencilKit06PencilB8DelegateP", ""]
+- ["12PDFPencilKit06PencilB9InterfaceP", ""]
+- ["12PDFPencilKit06PencilB8DelegateP", "snapshot"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "createPencilKitCanvas"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "updateCanvasOrientation"]
+provides-dynamic-lookup:
+depends-top-level:
+- "AnyObject"
+- "AssignmentPrecedence"
+- "CGRect"
+- "NSObject"
+- "PKCanvas"
+- "PencilKitDelegate"
+- "PencilKitInterface"
+- "UIImage"
+- !private "pencilKitCanvas"
+depends-member:
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "pencilKitDelegate"]
+- !private ["So15CALayerDelegateP", "updateCanvasOrientation"]
+- !private ["s7CVarArgP", "PKCanvas"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "pencilKitCanvas"]
+- !private ["s7CVarArgP", "pencilKitDelegate"]
+- !private ["s7CVarArgP", "updateCanvasOrientation"]
+- !private ["s28CustomDebugStringConvertibleP", "PKCanvas"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "pencilKitCanvas"]
+- !private ["s28CustomDebugStringConvertibleP", "pencilKitDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "updateCanvasOrientation"]
+- !private ["s23CustomStringConvertibleP", "PKCanvas"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "pencilKitCanvas"]
+- !private ["s23CustomStringConvertibleP", "pencilKitDelegate"]
+- !private ["s23CustomStringConvertibleP", "updateCanvasOrientation"]
+- !private ["SQ", "PKCanvas"]
+- !private ["SQ", ""]
+- !private ["SQ", "init"]
+- !private ["SQ", "pencilKitCanvas"]
+- !private ["SQ", "pencilKitDelegate"]
+- !private ["SQ", "updateCanvasOrientation"]
+- !private ["SH", "PKCanvas"]
+- !private ["SH", "init"]
+- !private ["SH", "pencilKitCanvas"]
+- !private ["SH", "pencilKitDelegate"]
+- !private ["SH", "updateCanvasOrientation"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "pencilKitDelegate"]
+- !private ["So8NSCodingP", "updateCanvasOrientation"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "PKCanvas"]
+- ["So8NSObjectC", "PencilKitDelegate"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "imageNamed"]
+- !private ["So8NSObjectC", "imageWithCGImage"]
+- !private ["So8NSObjectC", "imageWithCIImage"]
+- !private ["So8NSObjectC", "imageWithContentsOfFile"]
+- !private ["So8NSObjectC", "imageWithData"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "jpegData"]
+- !private ["So8NSObjectC", "pencilKitCanvas"]
+- !private ["So8NSObjectC", "pencilKitDelegate"]
+- !private ["So8NSObjectC", "pngData"]
+- !private ["So8NSObjectC", "systemImageNamed"]
+- !private ["So8NSObjectC", "updateCanvasOrientation"]
+- ["So8NSObjectP", "CGRect"]
+- ["So8NSObjectP", "PKCanvas"]
+- ["So8NSObjectP", "PencilKitDelegate"]
+- !private ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "imageNamed"]
+- !private ["So8NSObjectP", "imageWithCGImage"]
+- !private ["So8NSObjectP", "imageWithCIImage"]
+- !private ["So8NSObjectP", "imageWithContentsOfFile"]
+- !private ["So8NSObjectP", "imageWithData"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "jpegData"]
+- !private ["So8NSObjectP", "pencilKitCanvas"]
+- !private ["So8NSObjectP", "pencilKitDelegate"]
+- !private ["So8NSObjectP", "pngData"]
+- !private ["So8NSObjectP", "systemImageNamed"]
+- !private ["So8NSObjectP", "updateCanvasOrientation"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["12PDFPencilKit8PKCanvasC", ""]
+- !private ["12PDFPencilKit8PKCanvasC", "init"]
+- !private ["12PDFPencilKit8PKCanvasC", "pencilKitDelegate"]
+- !private ["12PDFPencilKit8PKCanvasC", "updateCanvasOrientation"]
+- !private ["So20PKCanvasViewDelegateP", "init"]
+- !private ["So20PKCanvasViewDelegateP", "pencilKitDelegate"]
+- !private ["So20PKCanvasViewDelegateP", "updateCanvasOrientation"]
+- !private ["So20PKToolPickerObserverP", "init"]
+- !private ["So20PKToolPickerObserverP", "pencilKitDelegate"]
+- !private ["So20PKToolPickerObserverP", "updateCanvasOrientation"]
+- ["12PDFPencilKit06PencilB8DelegateP", "PKCanvas"]
+- ["12PDFPencilKit06PencilB8DelegateP", "UIImage"]
+- ["12PDFPencilKit06PencilB8DelegateP", ""]
+- ["12PDFPencilKit06PencilB8DelegateP", "snapshot"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "CGRect"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "PKCanvas"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "PencilKitDelegate"]
+- ["12PDFPencilKit06PencilB9InterfaceP", ""]
+- ["12PDFPencilKit06PencilB9InterfaceP", "createPencilKitCanvas"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "pencilKitCanvas"]
+- ["12PDFPencilKit06PencilB9InterfaceP", "updateCanvasOrientation"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "pencilKitDelegate"]
+- !private ["So29UIAccessibilityIdentificationP", "updateCanvasOrientation"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "pencilKitDelegate"]
+- !private ["So12UIAppearanceP", "updateCanvasOrientation"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "pencilKitDelegate"]
+- !private ["So21UIAppearanceContainerP", "updateCanvasOrientation"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "pencilKitDelegate"]
+- !private ["So17UICoordinateSpaceP", "updateCanvasOrientation"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "pencilKitDelegate"]
+- !private ["So13UIDynamicItemP", "updateCanvasOrientation"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "pencilKitDelegate"]
+- !private ["So18UIFocusEnvironmentP", "updateCanvasOrientation"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "pencilKitDelegate"]
+- !private ["So11UIFocusItemP", "updateCanvasOrientation"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "pencilKitDelegate"]
+- !private ["So20UIFocusItemContainerP", "updateCanvasOrientation"]
+- !private ["So7UIImageC", "init"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
+- !private ["So24UILargeContentViewerItemP", "init"]
+- !private ["So24UILargeContentViewerItemP", "pencilKitDelegate"]
+- !private ["So24UILargeContentViewerItemP", "updateCanvasOrientation"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "pencilKitDelegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "updateCanvasOrientation"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "pencilKitDelegate"]
+- !private ["So11UIResponderC", "updateCanvasOrientation"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "pencilKitDelegate"]
+- !private ["So30UIResponderStandardEditActionsP", "updateCanvasOrientation"]
+- !private ["So20UIScrollViewDelegateP", ""]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "pencilKitDelegate"]
+- !private ["So20UIScrollViewDelegateP", "updateCanvasOrientation"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "pencilKitDelegate"]
+- !private ["So18UITraitEnvironmentP", "updateCanvasOrientation"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "pencilKitDelegate"]
+- !private ["So23UIUserActivityRestoringP", "updateCanvasOrientation"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "pencilKitDelegate"]
+- !private ["So6UIViewC", "updateCanvasOrientation"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKCanvas"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pencilKitCanvas"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pencilKitDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateCanvasOrientation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKCanvas"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pencilKitCanvas"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pencilKitDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "updateCanvasOrientation"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "pencilKitDelegate"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "updateCanvasOrientation"]
+depends-nominal:
+- !private "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "SQ"
+- !private "SH"
+- "So8NSCodingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "12PDFPencilKit8PKCanvasC"
+- !private "So20PKCanvasViewDelegateP"
+- !private "So20PKToolPickerObserverP"
+- "12PDFPencilKit06PencilB8DelegateP"
+- "12PDFPencilKit06PencilB9InterfaceP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So7UIImageC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So20UIScrollViewDelegateP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "s26_ExpressibleByImageLiteralP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/PencilKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
+- "/Users/mymac/Documents/projects/Swiss_Swift_PencilKit/PDFPencilKit/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/PencilKit.framework/Headers/PencilKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "706500d62562180eac648bddc20abf40"

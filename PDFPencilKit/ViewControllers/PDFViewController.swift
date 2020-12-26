@@ -20,6 +20,11 @@ class PDFViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
+    @IBAction func homeBtnPressed(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
+
+    }
+    
 
 
 }

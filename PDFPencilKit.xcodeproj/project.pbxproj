@@ -17,6 +17,9 @@
 		1F4F4C7E2596898D00B4EDF8 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1F4F4C7D2596898D00B4EDF8 /* sample.pdf */; };
 		1F4F4C8125968C1900B4EDF8 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F4C8025968C1900B4EDF8 /* CustomAlertViewController.swift */; };
 		1F4F4C8425968DC200B4EDF8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1F4F4C8325968DC200B4EDF8 /* Podfile */; };
+		1F4F4CAB2596A91B00B4EDF8 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F4CAA2596A91B00B4EDF8 /* NewNoteViewController.swift */; };
+		1F4F4CB22596B39900B4EDF8 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F4CB12596B39900B4EDF8 /* PKCanvas.swift */; };
+		1F4F4CB62596B3B600B4EDF8 /* PencilKitInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F4CB52596B3B600B4EDF8 /* PencilKitInterface.swift */; };
 		1F673D9E257A6CE4001A2D02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F673D9D257A6CE4001A2D02 /* AppDelegate.swift */; };
 		1F673DA0257A6CE4001A2D02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F673D9F257A6CE4001A2D02 /* SceneDelegate.swift */; };
 		1F673DA2257A6CE4001A2D02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F673DA1257A6CE4001A2D02 /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 		1F4F4C7D2596898D00B4EDF8 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		1F4F4C8025968C1900B4EDF8 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		1F4F4C8325968DC200B4EDF8 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1F4F4CAA2596A91B00B4EDF8 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		1F4F4CB12596B39900B4EDF8 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
+		1F4F4CB52596B3B600B4EDF8 /* PencilKitInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitInterface.swift; sourceTree = "<group>"; };
 		1F673D9A257A6CE4001A2D02 /* PDFPencilKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFPencilKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F673D9D257A6CE4001A2D02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F673D9F257A6CE4001A2D02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,15 @@
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
 		};
+		1F4F4CB02596B37A00B4EDF8 /* PencilKitView */ = {
+			isa = PBXGroup;
+			children = (
+				1F4F4CB12596B39900B4EDF8 /* PKCanvas.swift */,
+				1F4F4CB52596B3B600B4EDF8 /* PencilKitInterface.swift */,
+			);
+			path = PencilKitView;
+			sourceTree = "<group>";
+		};
 		1F673D91257A6CE4001A2D02 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +118,7 @@
 		1F673D9C257A6CE4001A2D02 /* PDFPencilKit */ = {
 			isa = PBXGroup;
 			children = (
+				1F4F4CB02596B37A00B4EDF8 /* PencilKitView */,
 				1F9C7CCD2596329F005AD14A /* Extensions */,
 				1F673DB7257A6E25001A2D02 /* AppDelegates */,
 				1F673DB8257A6E3E001A2D02 /* Storyboards */,
@@ -137,6 +153,7 @@
 				1F4F4C76259674D600B4EDF8 /* UICollectionViewCell */,
 				1F673DA1257A6CE4001A2D02 /* ViewController.swift */,
 				1F4F4C662596538800B4EDF8 /* PDFViewController.swift */,
+				1F4F4CAA2596A91B00B4EDF8 /* NewNoteViewController.swift */,
 				1F4F4C8025968C1900B4EDF8 /* CustomAlertViewController.swift */,
 			);
 			path = ViewControllers;
@@ -298,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4F4CB22596B39900B4EDF8 /* PKCanvas.swift in Sources */,
+				1F4F4CB62596B3B600B4EDF8 /* PencilKitInterface.swift in Sources */,
 				1F673DA2257A6CE4001A2D02 /* ViewController.swift in Sources */,
 				1F4F4C78259674FD00B4EDF8 /* contentCell.swift in Sources */,
 				1F4F4C6A259655E300B4EDF8 /* UIViewExtensions.swift in Sources */,
@@ -306,6 +325,7 @@
 				1F4F4C672596538800B4EDF8 /* PDFViewController.swift in Sources */,
 				1F4F4C8125968C1900B4EDF8 /* CustomAlertViewController.swift in Sources */,
 				1F673DA8257A6CE4001A2D02 /* PDFPencilKit.xcdatamodeld in Sources */,
+				1F4F4CAB2596A91B00B4EDF8 /* NewNoteViewController.swift in Sources */,
 				1F4F4C7325965CD800B4EDF8 /* sideCell.swift in Sources */,
 				1F673DA0257A6CE4001A2D02 /* SceneDelegate.swift in Sources */,
 			);
